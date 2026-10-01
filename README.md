@@ -15,7 +15,7 @@ The complete model/backend handoff for connecting the trained DustTwin AI to you
 
 The **trained model is included** in this repository. No retraining, GPU, Kaggle or separate model download is needed. Python **3.14** and the pinned packages are required; the live package is verified on macOS / Apple M4. Other platforms require the same setup checks before being called verified.
 
-The AI model/backend is complete for the Round 1 software handoff. [Report review and AI acceptance](docs/ai-report-review.md) identifies which claims in the team's one-page summary are supported and which need correction. The report's advanced AI roadmap is separate research.
+The frozen laboratory AI model/backend is complete for the Round 1 software handoff. [Report review and AI acceptance](docs/ai-report-review.md) identifies supported claims and corrections for that original model. The separately trained [experimental prototype](experimental/README.md) implements the subsequently authorized expansion; its [teammate report](experimental/teammate-report.md) records actual capabilities, mixed results and remaining field/device work.
 
 [One-page teammate report: AI available now, current limits and future work](output/pdf/DustTwin_AI_Model_Now_and_Future_One_Page.pdf) presents the verified capabilities, benchmark comparison and frontend connection step in a concise visual brief.
 

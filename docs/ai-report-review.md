@@ -4,6 +4,8 @@
 
 **The current laboratory PM10 model and its backend are complete for the Round 1 software handoff. The PDF is partly accurate, but its control, hardware and performance language needs correction.** No further fitting is required for this frozen model. The teammate connects it to the team's frontend and arranges backend hosting if the site is online.
 
+**Scope of this review:** the tables below describe the original frozen laboratory `/v1` handoff. The user subsequently authorized a separate measured-forecast/simulated-control expansion, now trained and published under [experimental/](../experimental/README.md). Read [the current teammate report](../experimental/teammate-report.md) and [updated one-page brief](../output/pdf/DustTwin_AI_Prototype_Update_One_Page.pdf) for those additional capabilities and their limitations. The separate prototype does not change the original model or establish physical site validation.
+
 ## What matches the repository
 
 | Report statement | Verified result |
@@ -35,7 +37,7 @@
 | "Live HUD trend status" | The handoff returns current/predicted values and features, and the example shows baselines and matured actual. The teammate's specific dashboard/HUD and trend labels have not been integrated or tested here. |
 | "Competition-proven" / "safe site mitigation" | No competition outcome or physical mitigation trial has been supplied. Describe a verified software prototype and its limits. |
 
-The eight future additions in the PDF are research options, not outstanding requirements for the current model: environmental multi-input training, PINNs, learned spraying, particle/droplet efficiency, crossing probabilities, edge deployment, online retraining and uncertainty/fault modelling. They need suitable data, separately declared evaluation and, where applicable, physical trials. Merely adding code would not complete or validate them today. Preserve the revealed final test; future model selection needs an untouched evaluation set.
+At the initial review, the PDF's eight additions were research options rather than outstanding requirements for the frozen laboratory model. The subsequently authorized prototype now includes measured multi-input forecasts, trained PINN/efficiency/control simulations, probability/interval/anomaly experiments, desktop ONNX exports and a guarded candidate-retraining workflow. Its mixed results are documented in [the teammate report](../experimental/teammate-report.md). Continuous field retraining, dependable fault diagnosis, target-board deployment, exact field arrival and physical control remain unvalidated. Preserve all revealed tests; further model selection needs an untouched evaluation set.
 
 ## AI acceptance completed today
 

@@ -1,5 +1,15 @@
 # Continue from here
 
+## Final repository completion, 1 October 2026
+
+The user requested committing and pushing all remaining project work. All required model weights, ONNX exports, source, API examples, evaluation reports and finished PDFs are tracked. Corrected the remaining documentation spacing edit and clarified that the earlier report review applies to the original laboratory model, while the subsequent experimental prototype has its own capability/evidence guide. The runtime and all frozen model/data/configuration hashes are unchanged.
+
+Final acceptance was rerun against the completed runtime at `255d970`: the laboratory checker passed all 75 original file hashes, five fixtures, 27,178 saved forecasts, 15,065 test rows, baseline/warning evidence and live/saved API behavior. The separate prototype checker passed all eight artifact identities, both tracked test traces, ONNX parity and five actual localhost HTTP endpoints in 2.327 seconds. No fitting or data download was performed. Temporary results are in ignored `tmp/final-push-lab-check.json` and `tmp/final-push-prototype-check.json`; the published fresh-clone evidence remains unchanged. Every tracked Markdown link resolves and whitespace checks pass.
+
+The authorized AI/software prototype repository is complete. Commit this final documentation checkpoint with the configured author, push `main` and confirm local HEAD, `origin/main` and GitHub main match with a clean worktree. Use Git to read the final hash; a commit cannot contain its own ID. The teammate's next step is `experimental/README.md` for the broader prototype or `docs/integration.md` for the original `/v1` model. Frontend integration/hosting and physical/target-device validation are separate tasks, not newly claimed accomplishments.
+
+Earlier session entries below retain their historical checks and next-step wording. This final checkpoint supersedes their pending-commit and preserved-typo notes. Continue only for an actual integration issue or further user-authorized work; do not retrain against published tests or create empty commits.
+
 ## Latest work: broader AI prototype, 1 October 2026
 
 The user clarified that they want the report's broader AI additions, asked for
@@ -65,11 +75,11 @@ ONNX parity and all 75 original upstream hashes passed. No raw/prepared training
 data was present or used. Actual evidence: `experimental/reports/fresh-clone-verification.json`.
 
 The approved software prototype is complete and reproducible on macOS arm64.
-The final evidence/documentation checkpoint is committed/pushed next; confirm
-local/GitHub equality. Exact next action: the teammate follows
+The final evidence/documentation checkpoint was published as `255d970`; read the
+latest completion section above for Git status. Exact next action: the teammate follows
 `experimental/README.md` for integration. Improvements requiring fresh site data,
-device targets and physical trials remain future work. Preserve the concurrent
-typo edit in `docs/ai-report-review.md`; do not stage or reset it.
+device targets and physical trials remain future work. The subsequent user request
+to commit remaining work is recorded in the final completion section above.
 
 1 October 2026, Asia/Dhaka. **Handoff complete.** Public repository: <https://github.com/arifshekhk8/DustTwin-Model-Integration>.
 
