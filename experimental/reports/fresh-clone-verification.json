@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "platform": {
+    "python": "3.13.5",
+    "os": "Darwin",
+    "machine": "arm64"
+  },
+  "artifact_files": 8,
+  "trace_rows": {
+    "outdoor": 3882,
+    "hourly": 83032
+  },
+  "onnx_max_absolute_difference": {
+    "plume": 1.4901161193847656e-07,
+    "spraying": 4.76837158203125e-06
+  },
+  "api_endpoints_verified": 5,
+  "actual_http": "five endpoints match actual trained inference over localhost HTTP",
+  "fitting_performed": false,
+  "raw_data_required": false,
+  "field_validated": false,
+  "seconds": 2.9786637090001022,
+  "source_commit": "2f91d564f262c36ee8553fb7ee0630d7c845ce7c",
+  "fresh_github_clone": true,
+  "new_environment_installed_from_pinned_requirements": true,
+  "dependency_check": "No broken requirements found.",
+  "unit_tests": {
+    "run": 14,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 0.41161200001079123
+  },
+  "original_upstream_files_unchanged": 75,
+  "raw_and_prepared_training_data_present": false,
+  "environment_copied": false
+}

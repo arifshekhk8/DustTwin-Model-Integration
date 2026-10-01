@@ -56,11 +56,20 @@ the published artifacts. Raw archives, installed environments and generated
 transitions remain ignored. All model weights and useful evidence/examples are
 tracked with attribution.
 
-Next: publish this verified prototype milestone, check it in a fresh GitHub clone
-with a newly installed separate environment and record the actual results. Then
-the teammate follows `experimental/README.md` for integration. Only future work
-needing fresh measurements/target devices remains. Preserve the concurrent typo
-edit in `docs/ai-report-review.md`; do not stage or reset it.
+Model/runtime milestone `2f91d564f262c36ee8553fb7ee0630d7c845ce7c` is pushed and
+cloned directly from GitHub into ignored `tmp/prototype-acceptance-clone`. A newly
+created Python 3.13.5 environment installed all pinned dependencies from cached
+wheels; no installed environment was copied. `pip check`, all 14 tests (0.379s),
+five actual HTTP endpoints, eight artifact identities, tracked trace metrics,
+ONNX parity and all 75 original upstream hashes passed. No raw/prepared training
+data was present or used. Actual evidence: `experimental/reports/fresh-clone-verification.json`.
+
+The approved software prototype is complete and reproducible on macOS arm64.
+The final evidence/documentation checkpoint is committed/pushed next; confirm
+local/GitHub equality. Exact next action: the teammate follows
+`experimental/README.md` for integration. Improvements requiring fresh site data,
+device targets and physical trials remain future work. Preserve the concurrent
+typo edit in `docs/ai-report-review.md`; do not stage or reset it.
 
 1 October 2026, Asia/Dhaka. **Handoff complete.** Public repository: <https://github.com/arifshekhk8/DustTwin-Model-Integration>.
 

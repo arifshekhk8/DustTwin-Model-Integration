@@ -12,6 +12,15 @@ real-data multi-input forecasts and clearly labelled simulated plume/spraying
 models; supply model artifacts, an optional separate API, evidence and a teammate
 guide. Report unsuccessful comparisons and unfinished physical/edge work plainly.
 
+**Complete:** fitted artifacts and five prototype API endpoints are published at
+`2f91d56`. All 14 tests, actual HTTP inference, raw-source forecast reproduction,
+ONNX checks and all 75 frozen file hashes pass. A direct fresh GitHub clone with
+a newly installed separate environment passes every prototype check without
+training data/refitting. Its actual evidence is
+`experimental/reports/fresh-clone-verification.json`. The updated one-page brief
+and teammate guide accurately report measured/simulated results and limitations.
+Physical/device/continuous-field validation is outside the accepted prototype.
+
 User request, 1 October 2026: create a public repository with every file the teammate needs to use the existing trained AI in his DustTwin frontend.
 
 1. **Complete:** package the actual trained model, shared features, strict inference service, pinned requirements, attributed recorded replay and evaluation. Add explicit frontend-origin configuration. Verify reload and API behavior.

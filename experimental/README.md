@@ -73,6 +73,9 @@ assumptions, without supplying field evidence.
 [Verification](reports/verification.json) checks artifacts, trace metrics, five
 actual HTTP endpoints and ONNX parity. [Source reproduction](reports/source-reproduction.json)
 recomputed all new test forecasts without fitting and checked all 75 frozen files.
+An actual [fresh GitHub clone](reports/fresh-clone-verification.json) with a newly
+installed pinned environment passed all 14 tests, five HTTP endpoints, artifact/
+trace/ONNX checks and 75 original file identities, without raw/prepared data.
 Use `source_audit.py` to repeat that stronger check; it needs pinned raw downloads.
 
 To reproduce this fixed fitting protocol, use an empty scratch copy:
