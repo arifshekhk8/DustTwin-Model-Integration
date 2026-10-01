@@ -1,0 +1,4 @@
+*.joblib binary
+*.png binary
+*.gz binary
+*.pdf binary

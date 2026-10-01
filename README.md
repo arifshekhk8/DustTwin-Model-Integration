@@ -1,0 +1,61 @@
+# DustTwin Model Integration
+
+The complete model/backend handoff for connecting the trained DustTwin AI to your existing website. Keep your frontend design and call this API for the actual predictions.
+
+The **trained model is included** in this repository. No retraining, GPU, Kaggle or separate model download is needed. Python **3.14** and the pinned packages are required; the live package is verified on macOS / Apple M4. Other platforms require the same setup checks before being called verified.
+
+## Start the backend
+
+```sh
+git clone https://github.com/arifshekhk8/DustTwin-Model-Integration.git
+cd DustTwin-Model-Integration
+python3.14 -m venv .venv
+.venv/bin/python -m pip install -r requirements-service.txt
+.venv/bin/python scripts/verify_model.py
+export DUSTTWIN_ALLOWED_ORIGINS='http://localhost:5173,http://127.0.0.1:5173,http://127.0.0.1:5174'
+.venv/bin/python scripts/serve.py
+```
+
+Open [health](http://127.0.0.1:8000/health) and confirm `ready: true` and `mode: live_inference`. If port 8000 is already used, add `--port 8100` and use that address in the frontend. The environment example is a reference; the launcher does not automatically read `.env` files.
+
+For Windows, use `py -3.14 -m venv .venv`, `.venv\Scripts\python.exe` for Python commands and `$env:DUSTTWIN_ALLOWED_ORIGINS='http://localhost:5173,http://127.0.0.1:5173,http://127.0.0.1:5174'` in PowerShell. This platform has not been tested here.
+
+## API
+
+| Endpoint | Purpose |
+|---|---|
+| `GET /health` | Model readiness and exact artifact identity |
+| `GET /v1/replay` | Available measured recordings and eligible clock ranges |
+| `GET /v1/replay/{episode_id}?second=120` | Past measurements, real model forecast and previously matured actual |
+| `POST /v1/predict` | Predict from an exact validated 121-snapshot history |
+| `GET /v1/evidence` | Model metadata, validation selection and final test results |
+| `GET /v1/scenarios` | Optional saved simulation cases |
+| `GET /v1/scenarios/{id}` | Optional simulation trace for all four strategies |
+| `POST /v1/simulate` | Rerun the common simulation with explicit assumptions |
+
+The model predicts OPC-N3 laboratory **PM10 30 seconds ahead**, using the preceding **120 seconds / 121 snapshots**. Recorded replay is the quickest valid input source for the Round 1 demo. Wind, site layout and nozzle settings belong to the separate simulation; they are not learned forecast features.
+
+## What's included
+
+- `models/artifacts/pm10-initial.joblib`: real trained model (54,679 bytes), with metadata, SHA-256 and model card.
+- `src/`, `services/`, `scripts/`, `configs/`, `requirements-*.txt`: complete inference, preparation and reproduction source.
+- `demo/replay/`: six attributed recorded-data replays with previously computed backups.
+- `demo/simulation/`, `experiments/scenarios/`: optional fair strategy simulation and assumptions.
+- `reports/`, `data/manifest.json`, `docs/`: actual evaluation, source provenance and scientific limits.
+- `tests/`: model, causal input, replay, simulation and integration checks.
+
+Original bulk training downloads are acquired through `scripts/download_data.py`; they are unnecessary for using the fitted model. Python itself, installed dependencies and the teammate's frontend remain separate installations.
+
+## Results to show honestly
+
+Held-out MAE (µg/m³): **model 88.405**, persistence **95.702**, trailing mean **81.565**. The model beats persistence but loses to the mean on MAE. It demonstrates trained laboratory forecasting; it does not validate outdoor boundary accuracy, exact crossing ETA or physical misting effectiveness. Read [the model card](models/model-card.md) and keep simulation results labelled as simulation.
+
+## Verify
+
+```sh
+.venv/bin/python scripts/verify_model.py
+.venv/bin/python scripts/verify_handoff.py
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+The original source/evidence is from [DustTwin-AI](https://github.com/arifshekhk8/DustTwin-AI), pinned in [upstream provenance](models/upstream-provenance.json). Code/model: MIT. Dataset derivatives: attributed CC BY 4.0; see [NOTICE](NOTICE.md). Continuation notes: [following.md](following.md).
