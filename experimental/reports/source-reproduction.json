@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "refitted": false,
+  "all_new_forecasts_recomputed_from_pinned_sources": {
+    "outdoor": 3882,
+    "hourly": 83032
+  },
+  "interval_coverage_recomputed": true,
+  "original_upstream_files_unchanged": 75,
+  "scripts": {
+    "datasets.py": "e11251a895fd364ca9338021ad2600a2838b6e5400eea534d11741fcc6afd68d",
+    "source_audit.py": "e1c7087e4df0f3541c20cf581d283b51e5999e047faf94df637d2c985760ebdf"
+  }
+}

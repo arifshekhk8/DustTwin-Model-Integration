@@ -1,0 +1,1318 @@
+{
+  "scope": "User-approved measured forecasts plus simulated control prototype",
+  "status": "trained experimental package; not field validated",
+  "physical_actuation": false,
+  "original_model_unchanged": true,
+  "capabilities": [
+    {
+      "report_item": "PM2.5 prediction",
+      "now": "New measured outdoor +30s model and urban +1/+3/+6h models",
+      "limit": "Outdoor PM2.5 loses persistence MAE; preliminary two-recording study"
+    },
+    {
+      "report_item": "Wind speed/direction prediction",
+      "now": "Learned +1h east/north wind components from measured hourly urban history",
+      "limit": "No measured second-scale construction wind forecast; nearest weather station and compass sectors"
+    },
+    {
+      "report_item": "Humidity/temperature",
+      "now": "Multi-input forecasts use both; learned +1h temperature and derived-RH forecasts",
+      "limit": "Short-term temperature uses selected persistence; short RH loses baseline; urban RH is derived"
+    },
+    {
+      "report_item": "Plume footprint / PINN",
+      "now": "Trained PINN with advection-diffusion-reaction residual loss, normalized footprint API",
+      "limit": "Idealized dimensionless simulation; approximate footprint, no calibrated site map"
+    },
+    {
+      "report_item": "Zone selection / reinforcement learning",
+      "now": "Trained Double-DQN, 31 discrete OFF/50%/100% zone actions",
+      "limit": "Simulation only; DQN lost declared reward to reactive control, which remains default"
+    },
+    {
+      "report_item": "Pumps/relays/valves/PWM",
+      "now": "Bounded simulated duty and assumed-flow recommendations",
+      "limit": "No physical hardware state, drivers or actuation; teammate handles integration"
+    },
+    {
+      "report_item": "Boundary arrival / threshold probabilities",
+      "now": "Learned calibrated hourly exceedance curves; conditional Monte Carlo zone arrival/exceedance in simulation",
+      "limit": "No exact arrival guarantee or measured perimeter-validation; curves stop at declared horizons"
+    },
+    {
+      "report_item": "No fabricated fallback",
+      "now": "Checksum-verified model loading; unavailable components return 503",
+      "limit": "Caller inputs remain unauthenticated; all simulator outputs explicitly labelled"
+    },
+    {
+      "report_item": "Multi-modal environmental AI",
+      "now": "Hourly PM2.5/PM10/weather multi-input regressors and risk classifiers, plus short outdoor multi-input model",
+      "limit": "Two separate cadences/datasets; no invented joining of hourly wind to second-scale dust"
+    },
+    {
+      "report_item": "Dynamic misting / particle-droplet efficiency",
+      "now": "Trained response surrogate with particle size, droplet size, RH, temperature and wind; duty selection via DQN",
+      "limit": "Generated toy capture labels; changed-efficiency stress test exposes poor transfer"
+    },
+    {
+      "report_item": "Probabilistic threshold crossing",
+      "now": "Six isotonic-calibrated classifiers for any future hourly exceedance in 1/3/6h",
+      "limit": "Illustrative thresholds, not exact probability curves or physical perimeter probabilities"
+    },
+    {
+      "report_item": "IoT edge streaming / ONNX",
+      "now": "Plume/policy float ONNX and int8 policy exported, CPU parity verified; typed streaming-history API",
+      "limit": "No microcontroller deployment/latency/power test; int8 changed some selected actions and is not the serving default"
+    },
+    {
+      "report_item": "Online continuous retraining",
+      "now": "Versioned candidate-training workflow accepts fresh measured hourly CSV, distinct declared train/validation/calibration/test periods",
+      "limit": "No incoming field feed or active continuous retraining; candidate promotion remains a reviewed step"
+    },
+    {
+      "report_item": "Uncertainty / sensor fault detection",
+      "now": "Calibration-residual intervals and learned IsolationForest anomalies; strict missing/duplicate-clock/invalid-window rejection",
+      "limit": "Not Bayesian intervals or fault diagnosis; PM2.5 coverage about 68%; extreme injection detection about 32%"
+    }
+  ],
+  "evidence": {
+    "datasets.json": {
+      "mendeley_outdoor": {
+        "title": "Data on different particulate matter profiles produced in laboratory from construction activity and outdoor monitoring",
+        "authors": [
+          "Komiljon Askarov",
+          "Jae-ho Choi"
+        ],
+        "year": 2024,
+        "doi": "10.17632/7f22n9v7hp.1",
+        "source_url": "https://data.mendeley.com/datasets/7f22n9v7hp/1",
+        "download_url": "https://data.mendeley.com/public-files/datasets/7f22n9v7hp/files/07e65063-2634-47ee-92aa-c73cf71d5168/file_downloaded",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "7aa66322a8440e1e353440616685ece43d9abb2af9d6a63971f224896816eadb",
+        "recordings": [
+          {
+            "path": "Data/Outdoor experiment data/Day 1/Raw/OPC-N3 outdoor monitoring from experiment day 1.csv",
+            "sha256": "bb5a475832292d5da57cc912d8b0e8b2e126ee4f8fbcb19b91ea8946dcf24528",
+            "native_rows": 3673,
+            "grid_rows": 3699,
+            "duration_seconds": 3698,
+            "clock_resolution": "one-second time-of-day labels, repeated native timestamps",
+            "maximum_observation_age_seconds": 1.5
+          },
+          {
+            "path": "Data/Outdoor experiment data/Day 2/Raw/OPC-N3 outdoor monitoring experiment day 2.csv",
+            "sha256": "d121ef5a9ed1249600c2dddb1ff06817563bfb9d3d00087349620868d2bcb7ec",
+            "native_rows": 4019,
+            "grid_rows": 4032,
+            "duration_seconds": 4031,
+            "clock_resolution": "OLE fractional-day numeric timestamps",
+            "maximum_observation_age_seconds": 1.5
+          }
+        ],
+        "recording_order": "Day labels; Day 1 lacks a calendar date",
+        "alterations": "Outdoor OPC-N3 only; causal latest-past one-second grid; no lab recordings, wind joining, interpolation or smoothing columns"
+      },
+      "uci": {
+        "title": "Beijing Multi-Site Air Quality",
+        "doi": "10.24432/C5RK5G",
+        "source_url": "https://archive.ics.uci.edu/dataset/501/beijingmultisiteairqualitydata",
+        "download_url": "https://archive.ics.uci.edu/static/public/501/beijing%2Bmulti%2Bsite%2Bair%2Bquality%2Bdata.zip",
+        "creator": "Song Chen (2017)",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+        "bytes": 8192212,
+        "rows": 420768,
+        "stations": [
+          "Aotizhongxin",
+          "Changping",
+          "Dingling",
+          "Dongsi",
+          "Guanyuan",
+          "Gucheng",
+          "Huairou",
+          "Nongzhanguan",
+          "Shunyi",
+          "Tiantan",
+          "Wanliu",
+          "Wanshouxigong"
+        ],
+        "native_cadence_seconds": 3600,
+        "humidity": "derived with Magnus approximation from measured temperature and dewpoint",
+        "wind": "16 compass sectors converted to meteorological wind-to east/north velocity components",
+        "time": "Original station local calendar; no fabricated UTC timestamps",
+        "alterations": "Causal lag/rolling features; no backfill or interpolation; incomplete windows/targets dropped"
+      },
+      "training_seconds": 228.66552945799776,
+      "config_sha256": "b701ef6cc30082f19fd7a8c51f0a11f66f48d90ffeab64a7945aa575d188d4d4"
+    },
+    "outdoor-evaluation.json": {
+      "source": "measured outdoor OPC-N3; no spraying treatment",
+      "artifact_sha256_frozen_before_test": "d574c7585e566d0838431db7b90ef01c4cfebad19b46071cc5a7024d6ace8645",
+      "validation": {
+        "pm25@30s": {
+          "validation_learned": {
+            "mae": 0.7789660413530439,
+            "rmse": 0.9270346699624187
+          },
+          "validation_persistence": {
+            "mae": 0.8503220035778176,
+            "rmse": 1.13471068396964
+          },
+          "validation_selected": {
+            "mae": 0.7465606987082034,
+            "rmse": 0.9114178746243959
+          },
+          "learned_weight_selected_without_test": 0.75,
+          "interval_radius": 1.5896773576587866,
+          "calibration_rows": 560
+        },
+        "pm10@30s": {
+          "validation_learned": {
+            "mae": 3.6597515578164947,
+            "rmse": 5.375240614140401
+          },
+          "validation_persistence": {
+            "mae": 2.546744186046512,
+            "rmse": 6.215301779279379
+          },
+          "validation_selected": {
+            "mae": 3.2021904032800457,
+            "rmse": 5.03072499145831
+          },
+          "learned_weight_selected_without_test": 0.75,
+          "interval_radius": 7.073137048020717,
+          "calibration_rows": 560
+        },
+        "temperature@30s": {
+          "validation_learned": {
+            "mae": 0.08501011050414799,
+            "rmse": 0.10170869499064233
+          },
+          "validation_persistence": {
+            "mae": 0.05420393559928444,
+            "rmse": 0.0750670541036932
+          },
+          "validation_selected": {
+            "mae": 0.05420393559928444,
+            "rmse": 0.0750670541036932
+          },
+          "learned_weight_selected_without_test": 0,
+          "interval_radius": 0.10000000000000142,
+          "calibration_rows": 560
+        },
+        "humidity@30s": {
+          "validation_learned": {
+            "mae": 0.5771904448082076,
+            "rmse": 0.7002855219943558
+          },
+          "validation_persistence": {
+            "mae": 0.5305903398926655,
+            "rmse": 0.6657477268291461
+          },
+          "validation_selected": {
+            "mae": 0.530046894424567,
+            "rmse": 0.6550675947116131
+          },
+          "learned_weight_selected_without_test": 0.25,
+          "interval_radius": 1.6440528262114569,
+          "calibration_rows": 560
+        }
+      },
+      "test": {
+        "pm25@30s": {
+          "rows": 3882,
+          "learned": {
+            "mae": 1.5147342734275049,
+            "rmse": 3.6326950199925676
+          },
+          "selected": {
+            "mae": 1.41176175061184,
+            "rmse": 3.6148969240128106
+          },
+          "persistence": {
+            "mae": 1.3399124162802678,
+            "rmse": 3.6956469512738304
+          },
+          "empirical_90pct_interval_coverage": 0.675682637815559,
+          "mean_interval_width": 3.114029437343262
+        },
+        "pm10@30s": {
+          "rows": 3882,
+          "learned": {
+            "mae": 6.324162638186808,
+            "rmse": 40.300636952356115
+          },
+          "selected": {
+            "mae": 6.3104859795917205,
+            "rmse": 40.6693354356913
+          },
+          "persistence": {
+            "mae": 7.2997243688820195,
+            "rmse": 42.38198454882398
+          },
+          "empirical_90pct_interval_coverage": 0.8603812467800103,
+          "mean_interval_width": 10.688098863946877
+        },
+        "temperature@30s": {
+          "rows": 3882,
+          "learned": {
+            "mae": 0.06161179381584079,
+            "rmse": 0.07670571766421672
+          },
+          "selected": {
+            "mae": 0.03763523956723339,
+            "rmse": 0.06280002690844316
+          },
+          "persistence": {
+            "mae": 0.03763523956723339,
+            "rmse": 0.06280002690844316
+          },
+          "empirical_90pct_interval_coverage": 0.9909840288511077,
+          "mean_interval_width": 0.20000000000000284
+        },
+        "humidity@30s": {
+          "rows": 3882,
+          "learned": {
+            "mae": 1.3639811873314522,
+            "rmse": 1.6614773483803669
+          },
+          "selected": {
+            "mae": 0.4246166533676116,
+            "rmse": 0.5053725920194113
+          },
+          "persistence": {
+            "mae": 0.20690365790829468,
+            "rmse": 0.28119858279789123
+          },
+          "empirical_90pct_interval_coverage": 1.0,
+          "mean_interval_width": 3.2881056524229137
+        }
+      },
+      "split_counts": {
+        "train": 2068,
+        "validation": 559,
+        "calibration": 560,
+        "test": 3882
+      },
+      "clock_spans": {
+        "train": [
+          120.0,
+          2187.0
+        ],
+        "validation": [
+          2369.0,
+          2927.0
+        ],
+        "calibration": [
+          3109.0,
+          3668.0
+        ]
+      },
+      "limits": [
+        "Only two related outdoor recordings; no general site validation",
+        "Day 1 dates absent and timestamps quantized to seconds",
+        "Temperature/RH are instrument readings; wind absent",
+        "Coverage empirical on this recording, not guaranteed for correlated streams"
+      ]
+    },
+    "hourly-evaluation.json": {
+      "source": "measured hourly urban station records, derived humidity",
+      "artifact_sha256_frozen_before_test": "e235170e7886e278f45b10226889af8081b6befd8947f1c197d4ec5ed80febbe",
+      "validation": {
+        "pm25@1h": {
+          "validation_learned": {
+            "mae": 9.414931183852547,
+            "rmse": 16.22609481932112
+          },
+          "validation_persistence": {
+            "mae": 10.344649328501385,
+            "rmse": 18.403689599538072
+          },
+          "validation_selected": {
+            "mae": 9.414931183852547,
+            "rmse": 16.22609481932112
+          },
+          "learned_weight_selected_without_test": 1,
+          "interval_radius": 20.683783885634654,
+          "calibration_rows": 37507
+        },
+        "pm10@1h": {
+          "validation_learned": {
+            "mae": 17.118592639212192,
+            "rmse": 28.89096060953719
+          },
+          "validation_persistence": {
+            "mae": 17.815609678107013,
+            "rmse": 30.16468253392746
+          },
+          "validation_selected": {
+            "mae": 16.90745493979576,
+            "rmse": 28.61958541830387
+          },
+          "learned_weight_selected_without_test": 0.75,
+          "interval_radius": 32.73054011239057,
+          "calibration_rows": 37507
+        },
+        "temperature@1h": {
+          "validation_learned": {
+            "mae": 0.7069919490096861,
+            "rmse": 0.9759702619129926
+          },
+          "validation_persistence": {
+            "mae": 0.9926524702825217,
+            "rmse": 1.3324758947038444
+          },
+          "validation_selected": {
+            "mae": 0.7069919490096861,
+            "rmse": 0.9759702619129926
+          },
+          "learned_weight_selected_without_test": 1,
+          "interval_radius": 1.253774115288035,
+          "calibration_rows": 37507
+        },
+        "humidity@1h": {
+          "validation_learned": {
+            "mae": 3.269522353136967,
+            "rmse": 5.258087273713489
+          },
+          "validation_persistence": {
+            "mae": 3.9271742891058916,
+            "rmse": 6.160772173568954
+          },
+          "validation_selected": {
+            "mae": 3.269522353136967,
+            "rmse": 5.258087273713489
+          },
+          "learned_weight_selected_without_test": 1,
+          "interval_radius": 7.559629046340092,
+          "calibration_rows": 37507
+        },
+        "wind_east@1h": {
+          "validation_learned": {
+            "mae": 0.78514757923928,
+            "rmse": 1.069982409870656
+          },
+          "validation_persistence": {
+            "mae": 0.8356860355696157,
+            "rmse": 1.1731817765916182
+          },
+          "validation_selected": {
+            "mae": 0.7731518196792785,
+            "rmse": 1.0661160698091987
+          },
+          "learned_weight_selected_without_test": 0.75,
+          "interval_radius": 1.3670650834418754,
+          "calibration_rows": 37507
+        },
+        "wind_north@1h": {
+          "validation_learned": {
+            "mae": 0.6604693410725839,
+            "rmse": 0.9051143475272947
+          },
+          "validation_persistence": {
+            "mae": 0.7259018084710752,
+            "rmse": 1.0088566497505378
+          },
+          "validation_selected": {
+            "mae": 0.6604693410725839,
+            "rmse": 0.9051143475272947
+          },
+          "learned_weight_selected_without_test": 1,
+          "interval_radius": 1.1794139612136327,
+          "calibration_rows": 37507
+        },
+        "pm25@3h": {
+          "validation_learned": {
+            "mae": 19.44390049484425,
+            "rmse": 32.60297983426576
+          },
+          "validation_persistence": {
+            "mae": 21.728192283095293,
+            "rmse": 37.04783763598696
+          },
+          "validation_selected": {
+            "mae": 19.44390049484425,
+            "rmse": 32.60297983426576
+          },
+          "learned_weight_selected_without_test": 1,
+          "interval_radius": 45.73289318955305,
+          "calibration_rows": 37507
+        },
+        "pm10@3h": {
+          "validation_learned": {
+            "mae": 29.585287814226295,
+            "rmse": 45.67641230338686
+          },
+          "validation_persistence": {
+            "mae": 33.28668727350245,
+            "rmse": 51.91224660194078
+          },
+          "validation_selected": {
+            "mae": 29.388155433456024,
+            "rmse": 45.601277061700046
+          },
+          "learned_weight_selected_without_test": 0.75,
+          "interval_radius": 58.0624630335576,
+          "calibration_rows": 37507
+        },
+        "pm25@6h": {
+          "validation_learned": {
+            "mae": 29.036249584208505,
+            "rmse": 45.82947136265747
+          },
+          "validation_persistence": {
+            "mae": 32.89256821573225,
+            "rmse": 52.91944991927933
+          },
+          "validation_selected": {
+            "mae": 29.036249584208505,
+            "rmse": 45.82947136265747
+          },
+          "learned_weight_selected_without_test": 1,
+          "interval_radius": 71.07829835804114,
+          "calibration_rows": 37507
+        },
+        "pm10@6h": {
+          "validation_learned": {
+            "mae": 39.69653400515165,
+            "rmse": 59.837120542271286
+          },
+          "validation_persistence": {
+            "mae": 46.81025634193135,
+            "rmse": 69.77434030552647
+          },
+          "validation_selected": {
+            "mae": 39.49273955367252,
+            "rmse": 59.24685133028171
+          },
+          "learned_weight_selected_without_test": 0.75,
+          "interval_radius": 78.17176769468989,
+          "calibration_rows": 37507
+        }
+      },
+      "test": {
+        "pm25@1h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 8.836742796724746,
+            "rmse": 16.63239394747362
+          },
+          "selected": {
+            "mae": 8.836742796724746,
+            "rmse": 16.63239394747362
+          },
+          "persistence": {
+            "mae": 9.530229309182003,
+            "rmse": 18.270294635184737
+          },
+          "empirical_90pct_interval_coverage": 0.9072164948453608,
+          "mean_interval_width": 38.62389742000242
+        },
+        "pm10@1h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 14.903208489109815,
+            "rmse": 26.995267931654343
+          },
+          "selected": {
+            "mae": 14.72548703257063,
+            "rmse": 26.8886247493843
+          },
+          "persistence": {
+            "mae": 15.37684266306966,
+            "rmse": 28.483241439046857
+          },
+          "empirical_90pct_interval_coverage": 0.895618556701031,
+          "mean_interval_width": 62.17966187574469
+        },
+        "temperature@1h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 0.6226857684584655,
+            "rmse": 0.873759277174089
+          },
+          "selected": {
+            "mae": 0.6226857684584655,
+            "rmse": 0.873759277174089
+          },
+          "persistence": {
+            "mae": 0.8905420213778618,
+            "rmse": 1.2099194759716005
+          },
+          "empirical_90pct_interval_coverage": 0.8870194623759514,
+          "mean_interval_width": 2.50754823057607
+        },
+        "humidity@1h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 3.131677137591169,
+            "rmse": 4.86060761858433
+          },
+          "selected": {
+            "mae": 3.131677137591169,
+            "rmse": 4.86060761858433
+          },
+          "persistence": {
+            "mae": 3.732948373823189,
+            "rmse": 5.732918300611386
+          },
+          "empirical_90pct_interval_coverage": 0.9177064264379998,
+          "mean_interval_width": 15.05682733480077
+        },
+        "wind_east@1h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 0.7039413285220502,
+            "rmse": 0.9645904428267924
+          },
+          "selected": {
+            "mae": 0.6953421392974423,
+            "rmse": 0.9664707983363674
+          },
+          "persistence": {
+            "mae": 0.7559922811150909,
+            "rmse": 1.0735883075353725
+          },
+          "empirical_90pct_interval_coverage": 0.8697128817805183,
+          "mean_interval_width": 2.734130166883751
+        },
+        "wind_north@1h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 0.6329789785446188,
+            "rmse": 0.8662835279857689
+          },
+          "selected": {
+            "mae": 0.6329789785446188,
+            "rmse": 0.8662835279857689
+          },
+          "persistence": {
+            "mae": 0.6839668071007251,
+            "rmse": 0.9545466732804593
+          },
+          "empirical_90pct_interval_coverage": 0.8553208401580114,
+          "mean_interval_width": 2.3588279224272655
+        },
+        "pm25@3h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 18.256747717627437,
+            "rmse": 32.645810118039904
+          },
+          "selected": {
+            "mae": 18.256747717627437,
+            "rmse": 32.645810118039904
+          },
+          "persistence": {
+            "mae": 19.704186337797477,
+            "rmse": 36.02340705784916
+          },
+          "empirical_90pct_interval_coverage": 0.9066865786684651,
+          "mean_interval_width": 79.99966199297685
+        },
+        "pm10@3h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 26.37758434965088,
+            "rmse": 44.33797201500991
+          },
+          "selected": {
+            "mae": 26.01358418652793,
+            "rmse": 44.273246444927985
+          },
+          "persistence": {
+            "mae": 28.93480826669236,
+            "rmse": 49.98142093878124
+          },
+          "empirical_90pct_interval_coverage": 0.8945225936988149,
+          "mean_interval_width": 105.6916584643661
+        },
+        "pm25@6h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 27.372501017814667,
+            "rmse": 45.73440910329365
+          },
+          "selected": {
+            "mae": 27.372501017814667,
+            "rmse": 45.73440910329365
+          },
+          "persistence": {
+            "mae": 29.518956546873493,
+            "rmse": 50.75865525165111
+          },
+          "empirical_90pct_interval_coverage": 0.9121423065805955,
+          "mean_interval_width": 119.96378166854522
+        },
+        "pm10@6h": {
+          "rows": 83032,
+          "learned": {
+            "mae": 36.35153057438644,
+            "rmse": 57.542973973838635
+          },
+          "selected": {
+            "mae": 35.59238197677837,
+            "rmse": 56.88293705128297
+          },
+          "persistence": {
+            "mae": 40.57246603719048,
+            "rmse": 66.14701418649682
+          },
+          "empirical_90pct_interval_coverage": 0.8923788418922824,
+          "mean_interval_width": 139.42771242632313
+        }
+      },
+      "cumulative_threshold_risk": {
+        "pm25_cross@1h": {
+          "brier_score": 0.03775588019775086,
+          "constant_training_rate_brier": 0.2521433049444656,
+          "observed_event_rate": 0.5797162539743713,
+          "mean_predicted_probability": 0.5797554368376445,
+          "threshold": 35
+        },
+        "pm25_cross@3h": {
+          "brier_score": 0.05050159444723612,
+          "constant_training_rate_brier": 0.24306746704769483,
+          "observed_event_rate": 0.6274689276423547,
+          "mean_predicted_probability": 0.6272412404508086,
+          "threshold": 35
+        },
+        "pm25_cross@6h": {
+          "brier_score": 0.06280040527874141,
+          "constant_training_rate_brier": 0.2279740948721211,
+          "observed_event_rate": 0.6779434434916659,
+          "mean_predicted_probability": 0.6801495899562767,
+          "threshold": 35
+        },
+        "pm10_cross@1h": {
+          "brier_score": 0.033494499551449994,
+          "constant_training_rate_brier": 0.1563243958261152,
+          "observed_event_rate": 0.18389295693226707,
+          "mean_predicted_probability": 0.18626958367114538,
+          "threshold": 150
+        },
+        "pm10_cross@3h": {
+          "brier_score": 0.054972459557304565,
+          "constant_training_rate_brier": 0.18704165526942887,
+          "observed_event_rate": 0.22804460930725504,
+          "mean_predicted_probability": 0.234309226983164,
+          "threshold": 150
+        },
+        "pm10_cross@6h": {
+          "brier_score": 0.0781818696736524,
+          "constant_training_rate_brier": 0.21864258567192354,
+          "observed_event_rate": 0.27941034781770885,
+          "mean_predicted_probability": 0.2924895975266816,
+          "threshold": 150
+        }
+      },
+      "anomaly_challenge": {
+        "normal_test_flag_rate": 0.0046367665478369785,
+        "injected_extreme_value_detection_rate": 0.32067154831872047,
+        "labels": "synthetically multiplied lag features, not real faults",
+        "model": "IsolationForest trained on measured training windows"
+      },
+      "split_counts": {
+        "train": 163670,
+        "validation": 37528,
+        "calibration": 37507,
+        "test": 83032
+      },
+      "total_usable_rows": 323225,
+      "discarded_incomplete_or_gap_rows": 97543,
+      "split_spans": {
+        "train": [
+          "2013-03-02 00:00:00",
+          "2014-12-31 17:00:00"
+        ],
+        "validation": [
+          "2015-01-03 00:00:00",
+          "2015-06-30 17:00:00"
+        ],
+        "calibration": [
+          "2015-07-03 00:00:00",
+          "2015-12-31 17:00:00"
+        ],
+        "test": [
+          "2016-01-03 00:00:00",
+          "2017-02-28 17:00:00"
+        ]
+      },
+      "limits": [
+        "Hourly cadence cannot validate 30-second wind-aware forecasts",
+        "Station weather matched from nearest weather station",
+        "Humidity is derived, not directly measured",
+        "No spraying, nozzle or spatial plume measurements",
+        "Intervals and probabilities need recalibration at a new site",
+        "Anomalies are possible faults, not diagnoses"
+      ]
+    },
+    "synthetic-dataset.json": {
+      "kind": "generated_simulation_only",
+      "config": {
+        "train_seed": 2101,
+        "validation_seed": 2201,
+        "test_seed": 2301,
+        "pinn_steps": 1600,
+        "dqn_steps": 30000,
+        "dqn_validation_every": 5000,
+        "test_episodes": 40,
+        "step_seconds": 5,
+        "episode_steps": 120,
+        "zone_names": [
+          "A_north",
+          "B_east",
+          "C_south",
+          "D_west"
+        ]
+      },
+      "efficiency_training_sha256": "7ee35d4fa9815cdc63ab27b05ec2a5449aedfb319990a4a614c12177c983c6f8",
+      "plume_training_sha256": "0c6f23cb363bbf0f1f8ab4cc359f163585e4682b435979835a8f6582b5693ff3",
+      "control_training_sha256": "0c9dea97eab6a640a578ad8c56852c3f077d021acc88c06d7b8a2eda3844a93a",
+      "training_seconds": 9.957360667001922,
+      "generator": "simulation_models.py",
+      "generator_sha256": "e85cb963e6e740d4acd63ce4dd2a08f3140e8bdb91d8fb6cf8d8efd29da994c6",
+      "reuse": "Generated data derived solely from the project's declared toy equations; no measured treatment labels",
+      "validation_test_note": "Separate seeds within an assumed distribution plus changed-efficiency stress test; no field validity"
+    },
+    "plume-evaluation.json": {
+      "dataset_kind": "synthetic_known_equation",
+      "training_rows": 30000,
+      "validation_rows": 5000,
+      "test_rows": 5000,
+      "checkpoint_selected_by_validation_step": 1400,
+      "test": {
+        "mae": 0.021589966490864754,
+        "rmse": 0.0377349928021431
+      },
+      "test_pde_residual_rmse": 0.13159801065921783,
+      "artifact_sha256_frozen_before_test": "6e7c9b896319051df931c7588499bcd905c02ec40bb8d3eea0dbc3ace20b6c99",
+      "equation": "dC/dt + u*dC/dx + v*dC/dy - D*(d2C/dx2+d2C/dy2) + k*C = 0",
+      "initial_condition": "Gaussian pulse sigma=0.2 and peak=1",
+      "domain": {
+        "x_y": [
+          -1,
+          1
+        ],
+        "t": [
+          0,
+          1
+        ],
+        "u_v": [
+          -0.5,
+          0.5
+        ],
+        "D": [
+          0.005,
+          0.08
+        ],
+        "k": [
+          0,
+          1
+        ]
+      },
+      "physics_loss_weight": 0.02,
+      "limits": [
+        "Dimensionless free-space pulse only",
+        "Uniform diffusivity/removal",
+        "No site geometry, turbulence, obstacles, calibrated emissions or absolute concentration",
+        "Approximate footprint, not exact"
+      ]
+    },
+    "efficiency-evaluation.json": {
+      "dataset_kind": "synthetic_assumed_scavenging_response",
+      "train_rows": 30000,
+      "test_rows": 5000,
+      "test": {
+        "mae": 0.0066676825252545025,
+        "rmse": 0.008677747046505282
+      },
+      "changed_efficiency_coefficient_stress_test": {
+        "mae": 0.17864759402370284,
+        "rmse": 0.18561553655593963
+      },
+      "artifact_sha256_frozen_before_test": "8ae4a5e9789a18f7b574d3c36aaaa25a210b1312039aade96aa0c19f1a989943",
+      "features": [
+        "RH_percent",
+        "temperature_C",
+        "particle_um",
+        "droplet_um",
+        "wind_m_s"
+      ],
+      "limits": [
+        "Toy capture/evaporation/residence function",
+        "No measured droplet capture or field spraying treatments",
+        "Particle/droplet diameters are supplied simulator assumptions, not inferred from PM10 alone"
+      ]
+    },
+    "control-evaluation.json": {
+      "dataset_kind": "synthetic_transport_and_learned_toy_efficiency",
+      "training_transitions": 30000,
+      "checkpoint_selected_by_validation_step": 20000,
+      "artifact_sha256_frozen_before_test": "46ae5e1f809254175f6e0e1cd888411593cb593c68b2f9900729f76499bc1990",
+      "validation": [
+        {
+          "training_step": 5000,
+          "validation": {
+            "no_control": {
+              "reward": -231.93686322848268,
+              "water_litres": 0.0,
+              "zone_seconds_above_150": 469.1666666666667,
+              "mean_excess_ug_m3": 28.992107903560328
+            },
+            "continuous": {
+              "reward": -43.96354969212905,
+              "water_litres": 20.000000000000004,
+              "zone_seconds_above_150": 42.083333333333336,
+              "mean_excess_ug_m3": 0.24544371151611957
+            },
+            "reactive": {
+              "reward": -9.409927238704386,
+              "water_litres": 2.756944444444443,
+              "zone_seconds_above_150": 84.58333333333333,
+              "mean_excess_ug_m3": 0.45254298817138133
+            },
+            "dqn": {
+              "reward": -13.752261264691235,
+              "water_litres": 5.612847222222221,
+              "zone_seconds_above_150": 42.5,
+              "mean_excess_ug_m3": 0.2456602622530704
+            }
+          }
+        },
+        {
+          "training_step": 10000,
+          "validation": {
+            "no_control": {
+              "reward": -231.93686322848268,
+              "water_litres": 0.0,
+              "zone_seconds_above_150": 469.1666666666667,
+              "mean_excess_ug_m3": 28.992107903560328
+            },
+            "continuous": {
+              "reward": -43.96354969212905,
+              "water_litres": 20.000000000000004,
+              "zone_seconds_above_150": 42.083333333333336,
+              "mean_excess_ug_m3": 0.24544371151611957
+            },
+            "reactive": {
+              "reward": -9.409927238704386,
+              "water_litres": 2.756944444444443,
+              "zone_seconds_above_150": 84.58333333333333,
+              "mean_excess_ug_m3": 0.45254298817138133
+            },
+            "dqn": {
+              "reward": -14.972594455642446,
+              "water_litres": 6.194444444444442,
+              "zone_seconds_above_150": 42.083333333333336,
+              "mean_excess_ug_m3": 0.24553264028863844
+            }
+          }
+        },
+        {
+          "training_step": 15000,
+          "validation": {
+            "no_control": {
+              "reward": -231.93686322848268,
+              "water_litres": 0.0,
+              "zone_seconds_above_150": 469.1666666666667,
+              "mean_excess_ug_m3": 28.992107903560328
+            },
+            "continuous": {
+              "reward": -43.96354969212905,
+              "water_litres": 20.000000000000004,
+              "zone_seconds_above_150": 42.083333333333336,
+              "mean_excess_ug_m3": 0.24544371151611957
+            },
+            "reactive": {
+              "reward": -9.409927238704386,
+              "water_litres": 2.756944444444443,
+              "zone_seconds_above_150": 84.58333333333333,
+              "mean_excess_ug_m3": 0.45254298817138133
+            },
+            "dqn": {
+              "reward": -14.085588266575058,
+              "water_litres": 5.586805555555557,
+              "zone_seconds_above_150": 68.75,
+              "mean_excess_ug_m3": 0.29416207498854857
+            }
+          }
+        },
+        {
+          "training_step": 20000,
+          "validation": {
+            "no_control": {
+              "reward": -231.93686322848268,
+              "water_litres": 0.0,
+              "zone_seconds_above_150": 469.1666666666667,
+              "mean_excess_ug_m3": 28.992107903560328
+            },
+            "continuous": {
+              "reward": -43.96354969212905,
+              "water_litres": 20.000000000000004,
+              "zone_seconds_above_150": 42.083333333333336,
+              "mean_excess_ug_m3": 0.24544371151611957
+            },
+            "reactive": {
+              "reward": -9.409927238704386,
+              "water_litres": 2.756944444444443,
+              "zone_seconds_above_150": 84.58333333333333,
+              "mean_excess_ug_m3": 0.45254298817138133
+            },
+            "dqn": {
+              "reward": -12.040278896962375,
+              "water_litres": 4.793402777777778,
+              "zone_seconds_above_150": 42.916666666666664,
+              "mean_excess_ug_m3": 0.2467666329536303
+            }
+          }
+        },
+        {
+          "training_step": 25000,
+          "validation": {
+            "no_control": {
+              "reward": -231.93686322848268,
+              "water_litres": 0.0,
+              "zone_seconds_above_150": 469.1666666666667,
+              "mean_excess_ug_m3": 28.992107903560328
+            },
+            "continuous": {
+              "reward": -43.96354969212905,
+              "water_litres": 20.000000000000004,
+              "zone_seconds_above_150": 42.083333333333336,
+              "mean_excess_ug_m3": 0.24544371151611957
+            },
+            "reactive": {
+              "reward": -9.409927238704386,
+              "water_litres": 2.756944444444443,
+              "zone_seconds_above_150": 84.58333333333333,
+              "mean_excess_ug_m3": 0.45254298817138133
+            },
+            "dqn": {
+              "reward": -13.5540923411329,
+              "water_litres": 5.062500000000002,
+              "zone_seconds_above_150": 87.08333333333333,
+              "mean_excess_ug_m3": 0.365355292641613
+            }
+          }
+        },
+        {
+          "training_step": 30000,
+          "validation": {
+            "no_control": {
+              "reward": -231.93686322848268,
+              "water_litres": 0.0,
+              "zone_seconds_above_150": 469.1666666666667,
+              "mean_excess_ug_m3": 28.992107903560328
+            },
+            "continuous": {
+              "reward": -43.96354969212905,
+              "water_litres": 20.000000000000004,
+              "zone_seconds_above_150": 42.083333333333336,
+              "mean_excess_ug_m3": 0.24544371151611957
+            },
+            "reactive": {
+              "reward": -9.409927238704386,
+              "water_litres": 2.756944444444443,
+              "zone_seconds_above_150": 84.58333333333333,
+              "mean_excess_ug_m3": 0.45254298817138133
+            },
+            "dqn": {
+              "reward": -12.820159562935382,
+              "water_litres": 5.121527777777778,
+              "zone_seconds_above_150": 52.083333333333336,
+              "mean_excess_ug_m3": 0.2581189037002561
+            }
+          }
+        }
+      ],
+      "test_episodes": 40,
+      "paired_test": {
+        "no_control": {
+          "reward": -204.96354275525127,
+          "water_litres": 0.0,
+          "zone_seconds_above_150": 479.5,
+          "mean_excess_ug_m3": 25.620442844406405
+        },
+        "continuous": {
+          "reward": -42.83247768340184,
+          "water_litres": 20.000000000000004,
+          "zone_seconds_above_150": 20.5,
+          "mean_excess_ug_m3": 0.10405971042521851
+        },
+        "reactive": {
+          "reward": -8.8911211546001,
+          "water_litres": 2.7072916666666655,
+          "zone_seconds_above_150": 70.5,
+          "mean_excess_ug_m3": 0.4007260818250115
+        },
+        "dqn": {
+          "reward": -11.146976109895254,
+          "water_litres": 4.896354166666667,
+          "zone_seconds_above_150": 23.625,
+          "mean_excess_ug_m3": 0.10807904498690613
+        }
+      },
+      "30pct_lower_capture_stress": {
+        "no_control": {
+          "reward": -186.7311588361084,
+          "water_litres": 0.0,
+          "zone_seconds_above_150": 481.125,
+          "mean_excess_ug_m3": 23.34139485451355
+        },
+        "continuous": {
+          "reward": -55.10338357574144,
+          "water_litres": 20.000000000000004,
+          "zone_seconds_above_150": 100.5,
+          "mean_excess_ug_m3": 1.6379229469676702
+        },
+        "reactive": {
+          "reward": -20.04430284554629,
+          "water_litres": 3.165624999999999,
+          "zone_seconds_above_150": 115.25,
+          "mean_excess_ug_m3": 1.6745612931932867
+        },
+        "dqn": {
+          "reward": -23.18647724961673,
+          "water_litres": 4.544791666666667,
+          "zone_seconds_above_150": 119.625,
+          "mean_excess_ug_m3": 1.705301843702091
+        }
+      },
+      "features": [
+        "source_pm10/1500",
+        "observed_source_change/500",
+        "A_pm10/150",
+        "B_pm10/150",
+        "C_pm10/150",
+        "D_pm10/150",
+        "wind_to_east_unit",
+        "wind_to_north_unit",
+        "wind_speed/8",
+        "RH/100",
+        "temperature/50",
+        "last_A_duty",
+        "last_B_duty",
+        "last_C_duty",
+        "last_D_duty"
+      ],
+      "action_duties": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.5,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.5,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          0.0
+        ],
+        [
+          0.5,
+          0.0,
+          0.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.5,
+          0.5,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.5
+        ],
+        [
+          0.5,
+          0.0,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.5,
+          0.0,
+          0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          0.5
+        ],
+        [
+          0.5,
+          0.0,
+          0.5,
+          0.5
+        ],
+        [
+          0.0,
+          0.5,
+          0.5,
+          0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "dt_seconds": 5,
+      "episode_seconds": 600,
+      "reward": "-(10*mean(max(PM10/150-1,0)) + 0.35*mean(duty))",
+      "full_zone_flow_L_min": 0.5,
+      "zone_convention": "A north, B east, C south, D west; meteorological wind FROM",
+      "limits": [
+        "One training seed family and one selected checkpoint; not robust RL benchmarking",
+        "Threshold 150 is illustrative simulation setting",
+        "All flow/suppression/transport constants assumed",
+        "Water and concentration outcomes are simulation only",
+        "No commands sent to physical hardware"
+      ]
+    },
+    "onnx-verification.json": {
+      "plume": {
+        "onnx_bytes": 22052,
+        "float32_max_absolute_difference": 3.5762786865234375e-07,
+        "verified_runtime": "macOS arm64 CPUExecutionProvider; not a microcontroller"
+      },
+      "spraying": {
+        "onnx_bytes": 29780,
+        "float32_max_absolute_difference": 5.7220458984375e-06,
+        "verified_runtime": "macOS arm64 CPUExecutionProvider; not a microcontroller",
+        "int8_bytes": 12157,
+        "int8_action_agreement_on_random_states": 0.951,
+        "int8_max_q_value_difference": 0.20171737670898438
+      }
+    }
+  }
+}

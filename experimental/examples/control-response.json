@@ -1,0 +1,261 @@
+{
+  "kind": "saved_verification_response_not_live",
+  "response": {
+    "simulation_only": true,
+    "policy": "dqn",
+    "trained_dqn_action": 23,
+    "recommendations": {
+      "A_north": {
+        "duty_fraction": 0.0,
+        "assumed_flow_L_min": 0.0
+      },
+      "B_east": {
+        "duty_fraction": 0.0,
+        "assumed_flow_L_min": 0.0
+      },
+      "C_south": {
+        "duty_fraction": 0.0,
+        "assumed_flow_L_min": 0.0
+      },
+      "D_west": {
+        "duty_fraction": 0.5,
+        "assumed_flow_L_min": 0.25
+      }
+    },
+    "physical_actuation": false,
+    "perimeter_probability_curves": {
+      "A_north": [
+        {
+          "within_seconds": 0,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 5,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 10,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 15,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 20,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 25,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 30,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 35,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 40,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 45,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 50,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 55,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 60,
+          "simulated_probability": 0.0
+        }
+      ],
+      "B_east": [
+        {
+          "within_seconds": 0,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 5,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 10,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 15,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 20,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 25,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 30,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 35,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 40,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 45,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 50,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 55,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 60,
+          "simulated_probability": 0.0
+        }
+      ],
+      "C_south": [
+        {
+          "within_seconds": 0,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 5,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 10,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 15,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 20,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 25,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 30,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 35,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 40,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 45,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 50,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 55,
+          "simulated_probability": 0.015625
+        },
+        {
+          "within_seconds": 60,
+          "simulated_probability": 0.03125
+        }
+      ],
+      "D_west": [
+        {
+          "within_seconds": 0,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 5,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 10,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 15,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 20,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 25,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 30,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 35,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 40,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 45,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 50,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 55,
+          "simulated_probability": 0.0
+        },
+        {
+          "within_seconds": 60,
+          "simulated_probability": 0.0
+        }
+      ]
+    },
+    "simulated_median_arrival_seconds": {
+      "A_north": null,
+      "B_east": null,
+      "C_south": null,
+      "D_west": null
+    },
+    "arrival_is_exact": false,
+    "illustrative_threshold_ug_m3": 150,
+    "rollouts": 64,
+    "warnings": [
+      "Synthetic conditional source/wind evolution; not measured arrival accuracy",
+      "DQN lost to reactive control on the declared test reward; default is reactive",
+      "DQN reduced test exposure but used more water than reactive control",
+      "Particle=6um and droplet=80um are fixed toy control assumptions",
+      "Commands are recommendations only"
+    ]
+  }
+}

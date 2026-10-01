@@ -1,0 +1,26 @@
+{
+  "dataset_kind": "synthetic_assumed_scavenging_response",
+  "train_rows": 30000,
+  "test_rows": 5000,
+  "test": {
+    "mae": 0.0066676825252545025,
+    "rmse": 0.008677747046505282
+  },
+  "changed_efficiency_coefficient_stress_test": {
+    "mae": 0.17864759402370284,
+    "rmse": 0.18561553655593963
+  },
+  "artifact_sha256_frozen_before_test": "8ae4a5e9789a18f7b574d3c36aaaa25a210b1312039aade96aa0c19f1a989943",
+  "features": [
+    "RH_percent",
+    "temperature_C",
+    "particle_um",
+    "droplet_um",
+    "wind_m_s"
+  ],
+  "limits": [
+    "Toy capture/evaporation/residence function",
+    "No measured droplet capture or field spraying treatments",
+    "Particle/droplet diameters are supplied simulator assumptions, not inferred from PM10 alone"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "simulation_only": true,
+  "humidity": 60.0,
+  "temperature": 30.0,
+  "particle_um": 6.0,
+  "droplet_um": 80.0,
+  "wind_speed_m_s": 4.2
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "platform": {
+    "python": "3.13.5",
+    "os": "Darwin",
+    "machine": "arm64"
+  },
+  "artifact_files": 8,
+  "trace_rows": {
+    "outdoor": 3882,
+    "hourly": 83032
+  },
+  "onnx_max_absolute_difference": {
+    "plume": 1.4901161193847656e-07,
+    "spraying": 4.76837158203125e-06
+  },
+  "api_endpoints_verified": 5,
+  "actual_http": "five endpoints match actual trained inference over localhost HTTP",
+  "fitting_performed": false,
+  "raw_data_required": false,
+  "field_validated": false,
+  "seconds": 2.237820666996413
+}

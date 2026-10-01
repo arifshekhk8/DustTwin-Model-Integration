@@ -1,0 +1,9 @@
+{
+  "kind": "saved_verification_response_not_live",
+  "response": {
+    "simulation_only": true,
+    "assumed_capture_fraction": 0.6720760905926408,
+    "model_training_data": "generated toy droplet/particle response",
+    "measured_capture_validation": false
+  }
+}

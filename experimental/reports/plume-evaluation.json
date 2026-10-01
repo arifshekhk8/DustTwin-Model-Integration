@@ -1,0 +1,44 @@
+{
+  "dataset_kind": "synthetic_known_equation",
+  "training_rows": 30000,
+  "validation_rows": 5000,
+  "test_rows": 5000,
+  "checkpoint_selected_by_validation_step": 1400,
+  "test": {
+    "mae": 0.021589966490864754,
+    "rmse": 0.0377349928021431
+  },
+  "test_pde_residual_rmse": 0.13159801065921783,
+  "artifact_sha256_frozen_before_test": "6e7c9b896319051df931c7588499bcd905c02ec40bb8d3eea0dbc3ace20b6c99",
+  "equation": "dC/dt + u*dC/dx + v*dC/dy - D*(d2C/dx2+d2C/dy2) + k*C = 0",
+  "initial_condition": "Gaussian pulse sigma=0.2 and peak=1",
+  "domain": {
+    "x_y": [
+      -1,
+      1
+    ],
+    "t": [
+      0,
+      1
+    ],
+    "u_v": [
+      -0.5,
+      0.5
+    ],
+    "D": [
+      0.005,
+      0.08
+    ],
+    "k": [
+      0,
+      1
+    ]
+  },
+  "physics_loss_weight": 0.02,
+  "limits": [
+    "Dimensionless free-space pulse only",
+    "Uniform diffusivity/removal",
+    "No site geometry, turbulence, obstacles, calibrated emissions or absolute concentration",
+    "Approximate footprint, not exact"
+  ]
+}

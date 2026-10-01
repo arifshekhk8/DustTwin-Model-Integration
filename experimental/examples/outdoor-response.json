@@ -1,0 +1,81 @@
+{
+  "kind": "saved_verification_response_not_live",
+  "response": {
+    "experiment": "measured_outdoor_30s",
+    "horizon_seconds": 30,
+    "issue_second": 2369,
+    "target_second": 2399,
+    "model_training_data": "measured PM2.5, PM10, instrument temperature and humidity",
+    "input_provenance": "supplied_by_caller; not independently authenticated",
+    "outputs": {
+      "pm25@30s": {
+        "prediction": 3.6433977473269774,
+        "learned_prediction": 3.86119699643597,
+        "unit": "ug/m3",
+        "persistence_baseline": 2.99,
+        "learned_weight": 0.75,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 2.053720389668191,
+          "upper": 5.233075104985764,
+          "nominal_coverage": 0.9,
+          "heldout_recording_coverage": 0.675682637815559,
+          "guaranteed_coverage": false
+        }
+      },
+      "pm10@30s": {
+        "prediction": 4.777545830466928,
+        "learned_prediction": 5.373394440622571,
+        "unit": "ug/m3",
+        "persistence_baseline": 2.99,
+        "learned_weight": 0.75,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 0.0,
+          "upper": 11.850682878487646,
+          "nominal_coverage": 0.9,
+          "heldout_recording_coverage": 0.8603812467800103,
+          "guaranteed_coverage": false
+        }
+      },
+      "temperature@30s": {
+        "prediction": 36.8,
+        "learned_prediction": 36.80775307237934,
+        "unit": "degC",
+        "persistence_baseline": 36.8,
+        "learned_weight": 0,
+        "method": "persistence_selected_on_validation",
+        "interval": {
+          "lower": 36.699999999999996,
+          "upper": 36.9,
+          "nominal_coverage": 0.9,
+          "heldout_recording_coverage": 0.9909840288511077,
+          "guaranteed_coverage": false
+        }
+      },
+      "humidity@30s": {
+        "prediction": 52.32017393232932,
+        "learned_prediction": 52.38069572931729,
+        "unit": "percent",
+        "persistence_baseline": 52.3,
+        "learned_weight": 0.25,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 50.67612110611786,
+          "upper": 53.964226758540775,
+          "nominal_coverage": 0.9,
+          "heldout_recording_coverage": 1.0,
+          "guaranteed_coverage": false
+        }
+      }
+    },
+    "field_validated": false,
+    "crossing_eta_seconds": null,
+    "warnings": [
+      "New outdoor experiment; original laboratory model unchanged",
+      "PM2.5 nominal 90% interval covered only about 68% on the held-out recording",
+      "Humidity prediction lost to persistence on the held-out recording",
+      "No wind inputs, spraying labels or causal treatment estimate"
+    ]
+  }
+}

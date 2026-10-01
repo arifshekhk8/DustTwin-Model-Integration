@@ -1,0 +1,452 @@
+{
+  "dataset_kind": "synthetic_transport_and_learned_toy_efficiency",
+  "training_transitions": 30000,
+  "checkpoint_selected_by_validation_step": 20000,
+  "artifact_sha256_frozen_before_test": "46ae5e1f809254175f6e0e1cd888411593cb593c68b2f9900729f76499bc1990",
+  "validation": [
+    {
+      "training_step": 5000,
+      "validation": {
+        "no_control": {
+          "reward": -231.93686322848268,
+          "water_litres": 0.0,
+          "zone_seconds_above_150": 469.1666666666667,
+          "mean_excess_ug_m3": 28.992107903560328
+        },
+        "continuous": {
+          "reward": -43.96354969212905,
+          "water_litres": 20.000000000000004,
+          "zone_seconds_above_150": 42.083333333333336,
+          "mean_excess_ug_m3": 0.24544371151611957
+        },
+        "reactive": {
+          "reward": -9.409927238704386,
+          "water_litres": 2.756944444444443,
+          "zone_seconds_above_150": 84.58333333333333,
+          "mean_excess_ug_m3": 0.45254298817138133
+        },
+        "dqn": {
+          "reward": -13.752261264691235,
+          "water_litres": 5.612847222222221,
+          "zone_seconds_above_150": 42.5,
+          "mean_excess_ug_m3": 0.2456602622530704
+        }
+      }
+    },
+    {
+      "training_step": 10000,
+      "validation": {
+        "no_control": {
+          "reward": -231.93686322848268,
+          "water_litres": 0.0,
+          "zone_seconds_above_150": 469.1666666666667,
+          "mean_excess_ug_m3": 28.992107903560328
+        },
+        "continuous": {
+          "reward": -43.96354969212905,
+          "water_litres": 20.000000000000004,
+          "zone_seconds_above_150": 42.083333333333336,
+          "mean_excess_ug_m3": 0.24544371151611957
+        },
+        "reactive": {
+          "reward": -9.409927238704386,
+          "water_litres": 2.756944444444443,
+          "zone_seconds_above_150": 84.58333333333333,
+          "mean_excess_ug_m3": 0.45254298817138133
+        },
+        "dqn": {
+          "reward": -14.972594455642446,
+          "water_litres": 6.194444444444442,
+          "zone_seconds_above_150": 42.083333333333336,
+          "mean_excess_ug_m3": 0.24553264028863844
+        }
+      }
+    },
+    {
+      "training_step": 15000,
+      "validation": {
+        "no_control": {
+          "reward": -231.93686322848268,
+          "water_litres": 0.0,
+          "zone_seconds_above_150": 469.1666666666667,
+          "mean_excess_ug_m3": 28.992107903560328
+        },
+        "continuous": {
+          "reward": -43.96354969212905,
+          "water_litres": 20.000000000000004,
+          "zone_seconds_above_150": 42.083333333333336,
+          "mean_excess_ug_m3": 0.24544371151611957
+        },
+        "reactive": {
+          "reward": -9.409927238704386,
+          "water_litres": 2.756944444444443,
+          "zone_seconds_above_150": 84.58333333333333,
+          "mean_excess_ug_m3": 0.45254298817138133
+        },
+        "dqn": {
+          "reward": -14.085588266575058,
+          "water_litres": 5.586805555555557,
+          "zone_seconds_above_150": 68.75,
+          "mean_excess_ug_m3": 0.29416207498854857
+        }
+      }
+    },
+    {
+      "training_step": 20000,
+      "validation": {
+        "no_control": {
+          "reward": -231.93686322848268,
+          "water_litres": 0.0,
+          "zone_seconds_above_150": 469.1666666666667,
+          "mean_excess_ug_m3": 28.992107903560328
+        },
+        "continuous": {
+          "reward": -43.96354969212905,
+          "water_litres": 20.000000000000004,
+          "zone_seconds_above_150": 42.083333333333336,
+          "mean_excess_ug_m3": 0.24544371151611957
+        },
+        "reactive": {
+          "reward": -9.409927238704386,
+          "water_litres": 2.756944444444443,
+          "zone_seconds_above_150": 84.58333333333333,
+          "mean_excess_ug_m3": 0.45254298817138133
+        },
+        "dqn": {
+          "reward": -12.040278896962375,
+          "water_litres": 4.793402777777778,
+          "zone_seconds_above_150": 42.916666666666664,
+          "mean_excess_ug_m3": 0.2467666329536303
+        }
+      }
+    },
+    {
+      "training_step": 25000,
+      "validation": {
+        "no_control": {
+          "reward": -231.93686322848268,
+          "water_litres": 0.0,
+          "zone_seconds_above_150": 469.1666666666667,
+          "mean_excess_ug_m3": 28.992107903560328
+        },
+        "continuous": {
+          "reward": -43.96354969212905,
+          "water_litres": 20.000000000000004,
+          "zone_seconds_above_150": 42.083333333333336,
+          "mean_excess_ug_m3": 0.24544371151611957
+        },
+        "reactive": {
+          "reward": -9.409927238704386,
+          "water_litres": 2.756944444444443,
+          "zone_seconds_above_150": 84.58333333333333,
+          "mean_excess_ug_m3": 0.45254298817138133
+        },
+        "dqn": {
+          "reward": -13.5540923411329,
+          "water_litres": 5.062500000000002,
+          "zone_seconds_above_150": 87.08333333333333,
+          "mean_excess_ug_m3": 0.365355292641613
+        }
+      }
+    },
+    {
+      "training_step": 30000,
+      "validation": {
+        "no_control": {
+          "reward": -231.93686322848268,
+          "water_litres": 0.0,
+          "zone_seconds_above_150": 469.1666666666667,
+          "mean_excess_ug_m3": 28.992107903560328
+        },
+        "continuous": {
+          "reward": -43.96354969212905,
+          "water_litres": 20.000000000000004,
+          "zone_seconds_above_150": 42.083333333333336,
+          "mean_excess_ug_m3": 0.24544371151611957
+        },
+        "reactive": {
+          "reward": -9.409927238704386,
+          "water_litres": 2.756944444444443,
+          "zone_seconds_above_150": 84.58333333333333,
+          "mean_excess_ug_m3": 0.45254298817138133
+        },
+        "dqn": {
+          "reward": -12.820159562935382,
+          "water_litres": 5.121527777777778,
+          "zone_seconds_above_150": 52.083333333333336,
+          "mean_excess_ug_m3": 0.2581189037002561
+        }
+      }
+    }
+  ],
+  "test_episodes": 40,
+  "paired_test": {
+    "no_control": {
+      "reward": -204.96354275525127,
+      "water_litres": 0.0,
+      "zone_seconds_above_150": 479.5,
+      "mean_excess_ug_m3": 25.620442844406405
+    },
+    "continuous": {
+      "reward": -42.83247768340184,
+      "water_litres": 20.000000000000004,
+      "zone_seconds_above_150": 20.5,
+      "mean_excess_ug_m3": 0.10405971042521851
+    },
+    "reactive": {
+      "reward": -8.8911211546001,
+      "water_litres": 2.7072916666666655,
+      "zone_seconds_above_150": 70.5,
+      "mean_excess_ug_m3": 0.4007260818250115
+    },
+    "dqn": {
+      "reward": -11.146976109895254,
+      "water_litres": 4.896354166666667,
+      "zone_seconds_above_150": 23.625,
+      "mean_excess_ug_m3": 0.10807904498690613
+    }
+  },
+  "30pct_lower_capture_stress": {
+    "no_control": {
+      "reward": -186.7311588361084,
+      "water_litres": 0.0,
+      "zone_seconds_above_150": 481.125,
+      "mean_excess_ug_m3": 23.34139485451355
+    },
+    "continuous": {
+      "reward": -55.10338357574144,
+      "water_litres": 20.000000000000004,
+      "zone_seconds_above_150": 100.5,
+      "mean_excess_ug_m3": 1.6379229469676702
+    },
+    "reactive": {
+      "reward": -20.04430284554629,
+      "water_litres": 3.165624999999999,
+      "zone_seconds_above_150": 115.25,
+      "mean_excess_ug_m3": 1.6745612931932867
+    },
+    "dqn": {
+      "reward": -23.18647724961673,
+      "water_litres": 4.544791666666667,
+      "zone_seconds_above_150": 119.625,
+      "mean_excess_ug_m3": 1.705301843702091
+    }
+  },
+  "features": [
+    "source_pm10/1500",
+    "observed_source_change/500",
+    "A_pm10/150",
+    "B_pm10/150",
+    "C_pm10/150",
+    "D_pm10/150",
+    "wind_to_east_unit",
+    "wind_to_north_unit",
+    "wind_speed/8",
+    "RH/100",
+    "temperature/50",
+    "last_A_duty",
+    "last_B_duty",
+    "last_C_duty",
+    "last_D_duty"
+  ],
+  "action_duties": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.5,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.0,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  ],
+  "dt_seconds": 5,
+  "episode_seconds": 600,
+  "reward": "-(10*mean(max(PM10/150-1,0)) + 0.35*mean(duty))",
+  "full_zone_flow_L_min": 0.5,
+  "zone_convention": "A north, B east, C south, D west; meteorological wind FROM",
+  "limits": [
+    "One training seed family and one selected checkpoint; not robust RL benchmarking",
+    "Threshold 150 is illustrative simulation setting",
+    "All flow/suppression/transport constants assumed",
+    "Water and concentration outcomes are simulation only",
+    "No commands sent to physical hardware"
+  ]
+}

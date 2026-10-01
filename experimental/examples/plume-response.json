@@ -1,0 +1,16 @@
+{
+  "kind": "saved_verification_response_not_live",
+  "response": {
+    "simulation_only": true,
+    "model": "physics_informed_neural_network",
+    "normalized_concentration": [
+      0.3097882866859436
+    ],
+    "coordinates": "dimensionless idealized free-space pulse",
+    "exact_footprint": false,
+    "warnings": [
+      "No site geometry or measured plume calibration",
+      "Do not convert these normalized outputs to absolute field PM"
+    ]
+  }
+}

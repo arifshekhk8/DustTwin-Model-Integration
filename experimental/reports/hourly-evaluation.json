@@ -1,0 +1,432 @@
+{
+  "source": "measured hourly urban station records, derived humidity",
+  "artifact_sha256_frozen_before_test": "e235170e7886e278f45b10226889af8081b6befd8947f1c197d4ec5ed80febbe",
+  "validation": {
+    "pm25@1h": {
+      "validation_learned": {
+        "mae": 9.414931183852547,
+        "rmse": 16.22609481932112
+      },
+      "validation_persistence": {
+        "mae": 10.344649328501385,
+        "rmse": 18.403689599538072
+      },
+      "validation_selected": {
+        "mae": 9.414931183852547,
+        "rmse": 16.22609481932112
+      },
+      "learned_weight_selected_without_test": 1,
+      "interval_radius": 20.683783885634654,
+      "calibration_rows": 37507
+    },
+    "pm10@1h": {
+      "validation_learned": {
+        "mae": 17.118592639212192,
+        "rmse": 28.89096060953719
+      },
+      "validation_persistence": {
+        "mae": 17.815609678107013,
+        "rmse": 30.16468253392746
+      },
+      "validation_selected": {
+        "mae": 16.90745493979576,
+        "rmse": 28.61958541830387
+      },
+      "learned_weight_selected_without_test": 0.75,
+      "interval_radius": 32.73054011239057,
+      "calibration_rows": 37507
+    },
+    "temperature@1h": {
+      "validation_learned": {
+        "mae": 0.7069919490096861,
+        "rmse": 0.9759702619129926
+      },
+      "validation_persistence": {
+        "mae": 0.9926524702825217,
+        "rmse": 1.3324758947038444
+      },
+      "validation_selected": {
+        "mae": 0.7069919490096861,
+        "rmse": 0.9759702619129926
+      },
+      "learned_weight_selected_without_test": 1,
+      "interval_radius": 1.253774115288035,
+      "calibration_rows": 37507
+    },
+    "humidity@1h": {
+      "validation_learned": {
+        "mae": 3.269522353136967,
+        "rmse": 5.258087273713489
+      },
+      "validation_persistence": {
+        "mae": 3.9271742891058916,
+        "rmse": 6.160772173568954
+      },
+      "validation_selected": {
+        "mae": 3.269522353136967,
+        "rmse": 5.258087273713489
+      },
+      "learned_weight_selected_without_test": 1,
+      "interval_radius": 7.559629046340092,
+      "calibration_rows": 37507
+    },
+    "wind_east@1h": {
+      "validation_learned": {
+        "mae": 0.78514757923928,
+        "rmse": 1.069982409870656
+      },
+      "validation_persistence": {
+        "mae": 0.8356860355696157,
+        "rmse": 1.1731817765916182
+      },
+      "validation_selected": {
+        "mae": 0.7731518196792785,
+        "rmse": 1.0661160698091987
+      },
+      "learned_weight_selected_without_test": 0.75,
+      "interval_radius": 1.3670650834418754,
+      "calibration_rows": 37507
+    },
+    "wind_north@1h": {
+      "validation_learned": {
+        "mae": 0.6604693410725839,
+        "rmse": 0.9051143475272947
+      },
+      "validation_persistence": {
+        "mae": 0.7259018084710752,
+        "rmse": 1.0088566497505378
+      },
+      "validation_selected": {
+        "mae": 0.6604693410725839,
+        "rmse": 0.9051143475272947
+      },
+      "learned_weight_selected_without_test": 1,
+      "interval_radius": 1.1794139612136327,
+      "calibration_rows": 37507
+    },
+    "pm25@3h": {
+      "validation_learned": {
+        "mae": 19.44390049484425,
+        "rmse": 32.60297983426576
+      },
+      "validation_persistence": {
+        "mae": 21.728192283095293,
+        "rmse": 37.04783763598696
+      },
+      "validation_selected": {
+        "mae": 19.44390049484425,
+        "rmse": 32.60297983426576
+      },
+      "learned_weight_selected_without_test": 1,
+      "interval_radius": 45.73289318955305,
+      "calibration_rows": 37507
+    },
+    "pm10@3h": {
+      "validation_learned": {
+        "mae": 29.585287814226295,
+        "rmse": 45.67641230338686
+      },
+      "validation_persistence": {
+        "mae": 33.28668727350245,
+        "rmse": 51.91224660194078
+      },
+      "validation_selected": {
+        "mae": 29.388155433456024,
+        "rmse": 45.601277061700046
+      },
+      "learned_weight_selected_without_test": 0.75,
+      "interval_radius": 58.0624630335576,
+      "calibration_rows": 37507
+    },
+    "pm25@6h": {
+      "validation_learned": {
+        "mae": 29.036249584208505,
+        "rmse": 45.82947136265747
+      },
+      "validation_persistence": {
+        "mae": 32.89256821573225,
+        "rmse": 52.91944991927933
+      },
+      "validation_selected": {
+        "mae": 29.036249584208505,
+        "rmse": 45.82947136265747
+      },
+      "learned_weight_selected_without_test": 1,
+      "interval_radius": 71.07829835804114,
+      "calibration_rows": 37507
+    },
+    "pm10@6h": {
+      "validation_learned": {
+        "mae": 39.69653400515165,
+        "rmse": 59.837120542271286
+      },
+      "validation_persistence": {
+        "mae": 46.81025634193135,
+        "rmse": 69.77434030552647
+      },
+      "validation_selected": {
+        "mae": 39.49273955367252,
+        "rmse": 59.24685133028171
+      },
+      "learned_weight_selected_without_test": 0.75,
+      "interval_radius": 78.17176769468989,
+      "calibration_rows": 37507
+    }
+  },
+  "test": {
+    "pm25@1h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 8.836742796724746,
+        "rmse": 16.63239394747362
+      },
+      "selected": {
+        "mae": 8.836742796724746,
+        "rmse": 16.63239394747362
+      },
+      "persistence": {
+        "mae": 9.530229309182003,
+        "rmse": 18.270294635184737
+      },
+      "empirical_90pct_interval_coverage": 0.9072164948453608,
+      "mean_interval_width": 38.62389742000242
+    },
+    "pm10@1h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 14.903208489109815,
+        "rmse": 26.995267931654343
+      },
+      "selected": {
+        "mae": 14.72548703257063,
+        "rmse": 26.8886247493843
+      },
+      "persistence": {
+        "mae": 15.37684266306966,
+        "rmse": 28.483241439046857
+      },
+      "empirical_90pct_interval_coverage": 0.895618556701031,
+      "mean_interval_width": 62.17966187574469
+    },
+    "temperature@1h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 0.6226857684584655,
+        "rmse": 0.873759277174089
+      },
+      "selected": {
+        "mae": 0.6226857684584655,
+        "rmse": 0.873759277174089
+      },
+      "persistence": {
+        "mae": 0.8905420213778618,
+        "rmse": 1.2099194759716005
+      },
+      "empirical_90pct_interval_coverage": 0.8870194623759514,
+      "mean_interval_width": 2.50754823057607
+    },
+    "humidity@1h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 3.131677137591169,
+        "rmse": 4.86060761858433
+      },
+      "selected": {
+        "mae": 3.131677137591169,
+        "rmse": 4.86060761858433
+      },
+      "persistence": {
+        "mae": 3.732948373823189,
+        "rmse": 5.732918300611386
+      },
+      "empirical_90pct_interval_coverage": 0.9177064264379998,
+      "mean_interval_width": 15.05682733480077
+    },
+    "wind_east@1h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 0.7039413285220502,
+        "rmse": 0.9645904428267924
+      },
+      "selected": {
+        "mae": 0.6953421392974423,
+        "rmse": 0.9664707983363674
+      },
+      "persistence": {
+        "mae": 0.7559922811150909,
+        "rmse": 1.0735883075353725
+      },
+      "empirical_90pct_interval_coverage": 0.8697128817805183,
+      "mean_interval_width": 2.734130166883751
+    },
+    "wind_north@1h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 0.6329789785446188,
+        "rmse": 0.8662835279857689
+      },
+      "selected": {
+        "mae": 0.6329789785446188,
+        "rmse": 0.8662835279857689
+      },
+      "persistence": {
+        "mae": 0.6839668071007251,
+        "rmse": 0.9545466732804593
+      },
+      "empirical_90pct_interval_coverage": 0.8553208401580114,
+      "mean_interval_width": 2.3588279224272655
+    },
+    "pm25@3h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 18.256747717627437,
+        "rmse": 32.645810118039904
+      },
+      "selected": {
+        "mae": 18.256747717627437,
+        "rmse": 32.645810118039904
+      },
+      "persistence": {
+        "mae": 19.704186337797477,
+        "rmse": 36.02340705784916
+      },
+      "empirical_90pct_interval_coverage": 0.9066865786684651,
+      "mean_interval_width": 79.99966199297685
+    },
+    "pm10@3h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 26.37758434965088,
+        "rmse": 44.33797201500991
+      },
+      "selected": {
+        "mae": 26.01358418652793,
+        "rmse": 44.273246444927985
+      },
+      "persistence": {
+        "mae": 28.93480826669236,
+        "rmse": 49.98142093878124
+      },
+      "empirical_90pct_interval_coverage": 0.8945225936988149,
+      "mean_interval_width": 105.6916584643661
+    },
+    "pm25@6h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 27.372501017814667,
+        "rmse": 45.73440910329365
+      },
+      "selected": {
+        "mae": 27.372501017814667,
+        "rmse": 45.73440910329365
+      },
+      "persistence": {
+        "mae": 29.518956546873493,
+        "rmse": 50.75865525165111
+      },
+      "empirical_90pct_interval_coverage": 0.9121423065805955,
+      "mean_interval_width": 119.96378166854522
+    },
+    "pm10@6h": {
+      "rows": 83032,
+      "learned": {
+        "mae": 36.35153057438644,
+        "rmse": 57.542973973838635
+      },
+      "selected": {
+        "mae": 35.59238197677837,
+        "rmse": 56.88293705128297
+      },
+      "persistence": {
+        "mae": 40.57246603719048,
+        "rmse": 66.14701418649682
+      },
+      "empirical_90pct_interval_coverage": 0.8923788418922824,
+      "mean_interval_width": 139.42771242632313
+    }
+  },
+  "cumulative_threshold_risk": {
+    "pm25_cross@1h": {
+      "brier_score": 0.03775588019775086,
+      "constant_training_rate_brier": 0.2521433049444656,
+      "observed_event_rate": 0.5797162539743713,
+      "mean_predicted_probability": 0.5797554368376445,
+      "threshold": 35
+    },
+    "pm25_cross@3h": {
+      "brier_score": 0.05050159444723612,
+      "constant_training_rate_brier": 0.24306746704769483,
+      "observed_event_rate": 0.6274689276423547,
+      "mean_predicted_probability": 0.6272412404508086,
+      "threshold": 35
+    },
+    "pm25_cross@6h": {
+      "brier_score": 0.06280040527874141,
+      "constant_training_rate_brier": 0.2279740948721211,
+      "observed_event_rate": 0.6779434434916659,
+      "mean_predicted_probability": 0.6801495899562767,
+      "threshold": 35
+    },
+    "pm10_cross@1h": {
+      "brier_score": 0.033494499551449994,
+      "constant_training_rate_brier": 0.1563243958261152,
+      "observed_event_rate": 0.18389295693226707,
+      "mean_predicted_probability": 0.18626958367114538,
+      "threshold": 150
+    },
+    "pm10_cross@3h": {
+      "brier_score": 0.054972459557304565,
+      "constant_training_rate_brier": 0.18704165526942887,
+      "observed_event_rate": 0.22804460930725504,
+      "mean_predicted_probability": 0.234309226983164,
+      "threshold": 150
+    },
+    "pm10_cross@6h": {
+      "brier_score": 0.0781818696736524,
+      "constant_training_rate_brier": 0.21864258567192354,
+      "observed_event_rate": 0.27941034781770885,
+      "mean_predicted_probability": 0.2924895975266816,
+      "threshold": 150
+    }
+  },
+  "anomaly_challenge": {
+    "normal_test_flag_rate": 0.0046367665478369785,
+    "injected_extreme_value_detection_rate": 0.32067154831872047,
+    "labels": "synthetically multiplied lag features, not real faults",
+    "model": "IsolationForest trained on measured training windows"
+  },
+  "split_counts": {
+    "train": 163670,
+    "validation": 37528,
+    "calibration": 37507,
+    "test": 83032
+  },
+  "total_usable_rows": 323225,
+  "discarded_incomplete_or_gap_rows": 97543,
+  "split_spans": {
+    "train": [
+      "2013-03-02 00:00:00",
+      "2014-12-31 17:00:00"
+    ],
+    "validation": [
+      "2015-01-03 00:00:00",
+      "2015-06-30 17:00:00"
+    ],
+    "calibration": [
+      "2015-07-03 00:00:00",
+      "2015-12-31 17:00:00"
+    ],
+    "test": [
+      "2016-01-03 00:00:00",
+      "2017-02-28 17:00:00"
+    ]
+  },
+  "limits": [
+    "Hourly cadence cannot validate 30-second wind-aware forecasts",
+    "Station weather matched from nearest weather station",
+    "Humidity is derived, not directly measured",
+    "No spraying, nozzle or spatial plume measurements",
+    "Intervals and probabilities need recalibration at a new site",
+    "Anomalies are possible faults, not diagnoses"
+  ]
+}

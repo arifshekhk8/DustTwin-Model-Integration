@@ -1,0 +1,14 @@
+{
+  "simulation_only": true,
+  "points": [
+    {
+      "x": 0.3,
+      "y": 0.0,
+      "t": 0.6,
+      "east_velocity": 0.3,
+      "north_velocity": 0.0,
+      "diffusivity": 0.03,
+      "removal": 0.2
+    }
+  ]
+}

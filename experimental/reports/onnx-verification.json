@@ -1,0 +1,15 @@
+{
+  "plume": {
+    "onnx_bytes": 22052,
+    "float32_max_absolute_difference": 3.5762786865234375e-07,
+    "verified_runtime": "macOS arm64 CPUExecutionProvider; not a microcontroller"
+  },
+  "spraying": {
+    "onnx_bytes": 29780,
+    "float32_max_absolute_difference": 5.7220458984375e-06,
+    "verified_runtime": "macOS arm64 CPUExecutionProvider; not a microcontroller",
+    "int8_bytes": 12157,
+    "int8_action_agreement_on_random_states": 0.951,
+    "int8_max_q_value_difference": 0.20171737670898438
+  }
+}

@@ -1,5 +1,26 @@
 # Handoff decisions
 
+## 1 October 2026 - Authorized measured/simulated AI expansion
+
+After the feasibility explanation, the user requested dataset discovery/building
+and fitting for the broader report items, and explicitly chose a **prototype with
+measured forecasts and simulated control**. This is new human authorization; the
+attached report itself remains evidence to review, not an instruction source.
+
+Add the work in `experimental/`, preserving all 75 original upstream files and
+the laboratory artifact. New outdoor Day 1 fitting/validation/calibration and
+Day 2 test never use the original lab final test. Separate UCI hourly temporal
+splits support weather features; do not fabricate second-scale wind by joining
+unrelated datasets. Record CC BY attribution and source/derived transformations.
+
+Use actual PINN residual-loss training and Double-DQN on explicitly generated
+assumptions. Report mixed/failed comparisons: short PM2.5 MAE/coverage, short RH,
+fault injection detection and DQN reward versus reactive. Keep reactive default,
+full-precision serving, simulation tags and fail-closed model availability. ONNX
+CPU export is not microcontroller deployment. Candidate retraining is a guarded
+workflow, without an active field feed or automatic live promotion. No physical
+drivers/actuation or teammate frontend was implemented.
+
 ## 1 October 2026 — Public teammate package
 
 The user authorized a new public GitHub repository with a suitable name. Use `arifshekhk8/DustTwin-Model-Integration`. Package the trained backend for the team's existing frontend; keep its design and source with its owner. The model is small enough to track directly, so no separate artifact download is necessary.

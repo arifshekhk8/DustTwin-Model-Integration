@@ -1,0 +1,42 @@
+{
+  "experiment": "environment_and_simulated_control_v1",
+  "artifacts": {
+    "environment-hourly.joblib": {
+      "sha256": "e235170e7886e278f45b10226889af8081b6befd8947f1c197d4ec5ed80febbe",
+      "bytes": 3993547
+    },
+    "outdoor-30s.joblib": {
+      "sha256": "d574c7585e566d0838431db7b90ef01c4cfebad19b46071cc5a7024d6ace8645",
+      "bytes": 367963
+    },
+    "plume-pinn.pt": {
+      "sha256": "6e7c9b896319051df931c7588499bcd905c02ec40bb8d3eea0dbc3ace20b6c99",
+      "bytes": 24502
+    },
+    "plume.onnx": {
+      "sha256": "63fefee29e09a4ce50b5344bfac853ed71480f6e8401cfe1396acc3928db6012",
+      "bytes": 22052
+    },
+    "spray-efficiency.joblib": {
+      "sha256": "8ae4a5e9789a18f7b574d3c36aaaa25a210b1312039aade96aa0c19f1a989943",
+      "bytes": 89135
+    },
+    "spraying-dqn.pt": {
+      "sha256": "46ae5e1f809254175f6e0e1cd888411593cb593c68b2f9900729f76499bc1990",
+      "bytes": 31953
+    },
+    "spraying-int8.onnx": {
+      "sha256": "a5a817f27d0de934aa696cbadef8394ada339c548e3c902807388bdedb6911d9",
+      "bytes": 12157
+    },
+    "spraying.onnx": {
+      "sha256": "1f2823c690cbcb65e6f634914df48453b7d33af75d61a9bddea5e68e0b1e15ac",
+      "bytes": 29780
+    }
+  },
+  "config_sha256": "b701ef6cc30082f19fd7a8c51f0a11f66f48d90ffeab64a7945aa575d188d4d4",
+  "python": "3.13.5",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "created_utc": "2026-10-01T09:40:22.390045+00:00",
+  "frozen_original_pm10_sha256": "d78f1b37269f72af45933e01722968fb13ed82178f6d8b3e4c5584d46cec09c7"
+}

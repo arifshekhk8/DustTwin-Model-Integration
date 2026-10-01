@@ -1,0 +1,71 @@
+{
+  "mendeley_outdoor": {
+    "title": "Data on different particulate matter profiles produced in laboratory from construction activity and outdoor monitoring",
+    "authors": [
+      "Komiljon Askarov",
+      "Jae-ho Choi"
+    ],
+    "year": 2024,
+    "doi": "10.17632/7f22n9v7hp.1",
+    "source_url": "https://data.mendeley.com/datasets/7f22n9v7hp/1",
+    "download_url": "https://data.mendeley.com/public-files/datasets/7f22n9v7hp/files/07e65063-2634-47ee-92aa-c73cf71d5168/file_downloaded",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "sha256": "7aa66322a8440e1e353440616685ece43d9abb2af9d6a63971f224896816eadb",
+    "recordings": [
+      {
+        "path": "Data/Outdoor experiment data/Day 1/Raw/OPC-N3 outdoor monitoring from experiment day 1.csv",
+        "sha256": "bb5a475832292d5da57cc912d8b0e8b2e126ee4f8fbcb19b91ea8946dcf24528",
+        "native_rows": 3673,
+        "grid_rows": 3699,
+        "duration_seconds": 3698,
+        "clock_resolution": "one-second time-of-day labels, repeated native timestamps",
+        "maximum_observation_age_seconds": 1.5
+      },
+      {
+        "path": "Data/Outdoor experiment data/Day 2/Raw/OPC-N3 outdoor monitoring experiment day 2.csv",
+        "sha256": "d121ef5a9ed1249600c2dddb1ff06817563bfb9d3d00087349620868d2bcb7ec",
+        "native_rows": 4019,
+        "grid_rows": 4032,
+        "duration_seconds": 4031,
+        "clock_resolution": "OLE fractional-day numeric timestamps",
+        "maximum_observation_age_seconds": 1.5
+      }
+    ],
+    "recording_order": "Day labels; Day 1 lacks a calendar date",
+    "alterations": "Outdoor OPC-N3 only; causal latest-past one-second grid; no lab recordings, wind joining, interpolation or smoothing columns"
+  },
+  "uci": {
+    "title": "Beijing Multi-Site Air Quality",
+    "doi": "10.24432/C5RK5G",
+    "source_url": "https://archive.ics.uci.edu/dataset/501/beijingmultisiteairqualitydata",
+    "download_url": "https://archive.ics.uci.edu/static/public/501/beijing%2Bmulti%2Bsite%2Bair%2Bquality%2Bdata.zip",
+    "creator": "Song Chen (2017)",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+    "bytes": 8192212,
+    "rows": 420768,
+    "stations": [
+      "Aotizhongxin",
+      "Changping",
+      "Dingling",
+      "Dongsi",
+      "Guanyuan",
+      "Gucheng",
+      "Huairou",
+      "Nongzhanguan",
+      "Shunyi",
+      "Tiantan",
+      "Wanliu",
+      "Wanshouxigong"
+    ],
+    "native_cadence_seconds": 3600,
+    "humidity": "derived with Magnus approximation from measured temperature and dewpoint",
+    "wind": "16 compass sectors converted to meteorological wind-to east/north velocity components",
+    "time": "Original station local calendar; no fabricated UTC timestamps",
+    "alterations": "Causal lag/rolling features; no backfill or interpolation; incomplete windows/targets dropped"
+  },
+  "training_seconds": 228.66552945799776,
+  "config_sha256": "b701ef6cc30082f19fd7a8c51f0a11f66f48d90ffeab64a7945aa575d188d4d4"
+}

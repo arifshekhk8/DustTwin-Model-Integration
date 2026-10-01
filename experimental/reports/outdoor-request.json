@@ -1,0 +1,852 @@
+{
+  "history": [
+    {
+      "second": 2249,
+      "pm25": 2.92,
+      "pm10": 2.92,
+      "temperature": 36.4,
+      "humidity": 53.0
+    },
+    {
+      "second": 2250,
+      "pm25": 2.46,
+      "pm10": 2.46,
+      "temperature": 36.4,
+      "humidity": 52.8
+    },
+    {
+      "second": 2251,
+      "pm25": 2.33,
+      "pm10": 2.33,
+      "temperature": 36.3,
+      "humidity": 52.7
+    },
+    {
+      "second": 2252,
+      "pm25": 2.93,
+      "pm10": 2.93,
+      "temperature": 36.4,
+      "humidity": 52.6
+    },
+    {
+      "second": 2253,
+      "pm25": 5.08,
+      "pm10": 11.71,
+      "temperature": 36.4,
+      "humidity": 52.6
+    },
+    {
+      "second": 2254,
+      "pm25": 2.99,
+      "pm10": 2.99,
+      "temperature": 36.4,
+      "humidity": 52.5
+    },
+    {
+      "second": 2255,
+      "pm25": 2.68,
+      "pm10": 2.68,
+      "temperature": 36.3,
+      "humidity": 52.5
+    },
+    {
+      "second": 2256,
+      "pm25": 2.73,
+      "pm10": 2.73,
+      "temperature": 36.4,
+      "humidity": 52.6
+    },
+    {
+      "second": 2257,
+      "pm25": 3.99,
+      "pm10": 6.06,
+      "temperature": 36.4,
+      "humidity": 52.9
+    },
+    {
+      "second": 2258,
+      "pm25": 2.65,
+      "pm10": 2.65,
+      "temperature": 36.4,
+      "humidity": 53.2
+    },
+    {
+      "second": 2259,
+      "pm25": 2.55,
+      "pm10": 2.55,
+      "temperature": 36.4,
+      "humidity": 53.7
+    },
+    {
+      "second": 2260,
+      "pm25": 2.39,
+      "pm10": 2.39,
+      "temperature": 36.4,
+      "humidity": 54.2
+    },
+    {
+      "second": 2261,
+      "pm25": 2.95,
+      "pm10": 2.95,
+      "temperature": 36.4,
+      "humidity": 54.6
+    },
+    {
+      "second": 2262,
+      "pm25": 3.58,
+      "pm10": 3.58,
+      "temperature": 36.4,
+      "humidity": 55.3
+    },
+    {
+      "second": 2263,
+      "pm25": 3.23,
+      "pm10": 3.23,
+      "temperature": 36.4,
+      "humidity": 55.6
+    },
+    {
+      "second": 2264,
+      "pm25": 4.25,
+      "pm10": 4.78,
+      "temperature": 36.4,
+      "humidity": 55.5
+    },
+    {
+      "second": 2265,
+      "pm25": 3.59,
+      "pm10": 3.6,
+      "temperature": 36.4,
+      "humidity": 55.3
+    },
+    {
+      "second": 2266,
+      "pm25": 3.17,
+      "pm10": 3.18,
+      "temperature": 36.4,
+      "humidity": 54.9
+    },
+    {
+      "second": 2267,
+      "pm25": 4.18,
+      "pm10": 21.99,
+      "temperature": 36.4,
+      "humidity": 54.3
+    },
+    {
+      "second": 2268,
+      "pm25": 2.64,
+      "pm10": 2.64,
+      "temperature": 36.4,
+      "humidity": 54.1
+    },
+    {
+      "second": 2269,
+      "pm25": 2.72,
+      "pm10": 2.72,
+      "temperature": 36.4,
+      "humidity": 54.0
+    },
+    {
+      "second": 2270,
+      "pm25": 3.27,
+      "pm10": 3.27,
+      "temperature": 36.4,
+      "humidity": 53.9
+    },
+    {
+      "second": 2271,
+      "pm25": 2.9,
+      "pm10": 2.9,
+      "temperature": 36.4,
+      "humidity": 53.8
+    },
+    {
+      "second": 2272,
+      "pm25": 3.22,
+      "pm10": 3.22,
+      "temperature": 36.4,
+      "humidity": 53.7
+    },
+    {
+      "second": 2273,
+      "pm25": 2.88,
+      "pm10": 2.88,
+      "temperature": 36.4,
+      "humidity": 53.8
+    },
+    {
+      "second": 2274,
+      "pm25": 3.21,
+      "pm10": 3.21,
+      "temperature": 36.4,
+      "humidity": 53.8
+    },
+    {
+      "second": 2275,
+      "pm25": 3.69,
+      "pm10": 3.77,
+      "temperature": 36.5,
+      "humidity": 53.6
+    },
+    {
+      "second": 2276,
+      "pm25": 3.01,
+      "pm10": 3.01,
+      "temperature": 36.5,
+      "humidity": 53.5
+    },
+    {
+      "second": 2277,
+      "pm25": 4.85,
+      "pm10": 7.22,
+      "temperature": 36.5,
+      "humidity": 53.3
+    },
+    {
+      "second": 2278,
+      "pm25": 3.09,
+      "pm10": 3.09,
+      "temperature": 36.5,
+      "humidity": 53.0
+    },
+    {
+      "second": 2279,
+      "pm25": 5.48,
+      "pm10": 6.04,
+      "temperature": 36.5,
+      "humidity": 52.9
+    },
+    {
+      "second": 2280,
+      "pm25": 3.32,
+      "pm10": 3.32,
+      "temperature": 36.5,
+      "humidity": 52.8
+    },
+    {
+      "second": 2281,
+      "pm25": 3.81,
+      "pm10": 3.89,
+      "temperature": 36.5,
+      "humidity": 52.7
+    },
+    {
+      "second": 2282,
+      "pm25": 3.41,
+      "pm10": 3.41,
+      "temperature": 36.5,
+      "humidity": 52.7
+    },
+    {
+      "second": 2283,
+      "pm25": 3.26,
+      "pm10": 3.27,
+      "temperature": 36.5,
+      "humidity": 52.8
+    },
+    {
+      "second": 2284,
+      "pm25": 3.29,
+      "pm10": 3.29,
+      "temperature": 36.5,
+      "humidity": 52.8
+    },
+    {
+      "second": 2285,
+      "pm25": 3.76,
+      "pm10": 3.85,
+      "temperature": 36.5,
+      "humidity": 52.7
+    },
+    {
+      "second": 2286,
+      "pm25": 3.27,
+      "pm10": 3.27,
+      "temperature": 36.5,
+      "humidity": 53.0
+    },
+    {
+      "second": 2287,
+      "pm25": 3.45,
+      "pm10": 3.54,
+      "temperature": 36.6,
+      "humidity": 52.9
+    },
+    {
+      "second": 2288,
+      "pm25": 3.38,
+      "pm10": 3.38,
+      "temperature": 36.6,
+      "humidity": 52.7
+    },
+    {
+      "second": 2289,
+      "pm25": 3.65,
+      "pm10": 3.65,
+      "temperature": 36.5,
+      "humidity": 52.6
+    },
+    {
+      "second": 2290,
+      "pm25": 3.17,
+      "pm10": 3.17,
+      "temperature": 36.5,
+      "humidity": 52.5
+    },
+    {
+      "second": 2291,
+      "pm25": 2.83,
+      "pm10": 2.83,
+      "temperature": 36.5,
+      "humidity": 52.4
+    },
+    {
+      "second": 2292,
+      "pm25": 5.39,
+      "pm10": 13.4,
+      "temperature": 36.6,
+      "humidity": 52.3
+    },
+    {
+      "second": 2293,
+      "pm25": 3.54,
+      "pm10": 3.54,
+      "temperature": 36.5,
+      "humidity": 52.3
+    },
+    {
+      "second": 2294,
+      "pm25": 3.21,
+      "pm10": 3.22,
+      "temperature": 36.6,
+      "humidity": 52.3
+    },
+    {
+      "second": 2295,
+      "pm25": 3.21,
+      "pm10": 3.21,
+      "temperature": 36.6,
+      "humidity": 52.6
+    },
+    {
+      "second": 2296,
+      "pm25": 3.56,
+      "pm10": 3.56,
+      "temperature": 36.6,
+      "humidity": 52.7
+    },
+    {
+      "second": 2297,
+      "pm25": 2.88,
+      "pm10": 2.88,
+      "temperature": 36.6,
+      "humidity": 52.8
+    },
+    {
+      "second": 2298,
+      "pm25": 3.45,
+      "pm10": 3.54,
+      "temperature": 36.6,
+      "humidity": 52.8
+    },
+    {
+      "second": 2299,
+      "pm25": 3.32,
+      "pm10": 3.33,
+      "temperature": 36.6,
+      "humidity": 52.8
+    },
+    {
+      "second": 2300,
+      "pm25": 2.47,
+      "pm10": 2.47,
+      "temperature": 36.6,
+      "humidity": 52.9
+    },
+    {
+      "second": 2301,
+      "pm25": 2.88,
+      "pm10": 2.88,
+      "temperature": 36.6,
+      "humidity": 52.8
+    },
+    {
+      "second": 2302,
+      "pm25": 4.76,
+      "pm10": 7.11,
+      "temperature": 36.6,
+      "humidity": 52.9
+    },
+    {
+      "second": 2303,
+      "pm25": 2.79,
+      "pm10": 2.79,
+      "temperature": 36.6,
+      "humidity": 53.1
+    },
+    {
+      "second": 2304,
+      "pm25": 3.0,
+      "pm10": 3.0,
+      "temperature": 36.6,
+      "humidity": 53.0
+    },
+    {
+      "second": 2305,
+      "pm25": 2.93,
+      "pm10": 2.93,
+      "temperature": 36.6,
+      "humidity": 52.9
+    },
+    {
+      "second": 2306,
+      "pm25": 4.01,
+      "pm10": 4.09,
+      "temperature": 36.6,
+      "humidity": 52.8
+    },
+    {
+      "second": 2307,
+      "pm25": 3.43,
+      "pm10": 3.43,
+      "temperature": 36.6,
+      "humidity": 52.6
+    },
+    {
+      "second": 2308,
+      "pm25": 3.37,
+      "pm10": 3.37,
+      "temperature": 36.7,
+      "humidity": 52.4
+    },
+    {
+      "second": 2309,
+      "pm25": 4.06,
+      "pm10": 4.06,
+      "temperature": 36.7,
+      "humidity": 52.3
+    },
+    {
+      "second": 2310,
+      "pm25": 3.75,
+      "pm10": 3.75,
+      "temperature": 36.6,
+      "humidity": 52.2
+    },
+    {
+      "second": 2311,
+      "pm25": 4.6,
+      "pm10": 6.93,
+      "temperature": 36.7,
+      "humidity": 52.1
+    },
+    {
+      "second": 2312,
+      "pm25": 3.29,
+      "pm10": 3.29,
+      "temperature": 36.7,
+      "humidity": 52.1
+    },
+    {
+      "second": 2313,
+      "pm25": 3.76,
+      "pm10": 3.76,
+      "temperature": 36.7,
+      "humidity": 52.0
+    },
+    {
+      "second": 2314,
+      "pm25": 3.67,
+      "pm10": 3.67,
+      "temperature": 36.7,
+      "humidity": 52.0
+    },
+    {
+      "second": 2315,
+      "pm25": 3.22,
+      "pm10": 3.23,
+      "temperature": 36.7,
+      "humidity": 52.0
+    },
+    {
+      "second": 2316,
+      "pm25": 2.87,
+      "pm10": 2.87,
+      "temperature": 36.7,
+      "humidity": 51.9
+    },
+    {
+      "second": 2317,
+      "pm25": 3.67,
+      "pm10": 3.67,
+      "temperature": 36.7,
+      "humidity": 51.9
+    },
+    {
+      "second": 2318,
+      "pm25": 3.49,
+      "pm10": 3.57,
+      "temperature": 36.7,
+      "humidity": 51.9
+    },
+    {
+      "second": 2319,
+      "pm25": 4.22,
+      "pm10": 4.32,
+      "temperature": 36.7,
+      "humidity": 51.9
+    },
+    {
+      "second": 2320,
+      "pm25": 2.77,
+      "pm10": 2.77,
+      "temperature": 36.7,
+      "humidity": 51.8
+    },
+    {
+      "second": 2321,
+      "pm25": 2.51,
+      "pm10": 2.51,
+      "temperature": 36.7,
+      "humidity": 51.8
+    },
+    {
+      "second": 2322,
+      "pm25": 2.94,
+      "pm10": 2.94,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2323,
+      "pm25": 3.91,
+      "pm10": 3.92,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2324,
+      "pm25": 3.34,
+      "pm10": 3.35,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2325,
+      "pm25": 3.41,
+      "pm10": 3.41,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2326,
+      "pm25": 3.69,
+      "pm10": 3.7,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2327,
+      "pm25": 2.67,
+      "pm10": 2.67,
+      "temperature": 36.7,
+      "humidity": 51.6
+    },
+    {
+      "second": 2328,
+      "pm25": 2.82,
+      "pm10": 2.82,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2329,
+      "pm25": 2.85,
+      "pm10": 2.85,
+      "temperature": 36.7,
+      "humidity": 51.6
+    },
+    {
+      "second": 2330,
+      "pm25": 2.77,
+      "pm10": 2.77,
+      "temperature": 36.7,
+      "humidity": 51.6
+    },
+    {
+      "second": 2331,
+      "pm25": 2.76,
+      "pm10": 2.76,
+      "temperature": 36.7,
+      "humidity": 51.6
+    },
+    {
+      "second": 2332,
+      "pm25": 3.0,
+      "pm10": 3.0,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2333,
+      "pm25": 2.39,
+      "pm10": 2.39,
+      "temperature": 36.7,
+      "humidity": 51.6
+    },
+    {
+      "second": 2334,
+      "pm25": 3.05,
+      "pm10": 3.05,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2335,
+      "pm25": 2.58,
+      "pm10": 2.58,
+      "temperature": 36.7,
+      "humidity": 51.6
+    },
+    {
+      "second": 2336,
+      "pm25": 3.95,
+      "pm10": 4.03,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2337,
+      "pm25": 2.87,
+      "pm10": 2.87,
+      "temperature": 36.7,
+      "humidity": 51.6
+    },
+    {
+      "second": 2338,
+      "pm25": 3.85,
+      "pm10": 3.86,
+      "temperature": 36.7,
+      "humidity": 51.6
+    },
+    {
+      "second": 2339,
+      "pm25": 3.62,
+      "pm10": 3.63,
+      "temperature": 36.7,
+      "humidity": 51.8
+    },
+    {
+      "second": 2340,
+      "pm25": 2.57,
+      "pm10": 2.57,
+      "temperature": 36.7,
+      "humidity": 51.8
+    },
+    {
+      "second": 2341,
+      "pm25": 2.89,
+      "pm10": 2.89,
+      "temperature": 36.7,
+      "humidity": 51.8
+    },
+    {
+      "second": 2342,
+      "pm25": 3.16,
+      "pm10": 3.16,
+      "temperature": 36.8,
+      "humidity": 51.7
+    },
+    {
+      "second": 2343,
+      "pm25": 3.23,
+      "pm10": 3.24,
+      "temperature": 36.8,
+      "humidity": 51.7
+    },
+    {
+      "second": 2344,
+      "pm25": 2.56,
+      "pm10": 2.56,
+      "temperature": 36.7,
+      "humidity": 51.7
+    },
+    {
+      "second": 2345,
+      "pm25": 2.78,
+      "pm10": 2.78,
+      "temperature": 36.8,
+      "humidity": 51.7
+    },
+    {
+      "second": 2346,
+      "pm25": 2.64,
+      "pm10": 2.64,
+      "temperature": 36.8,
+      "humidity": 51.7
+    },
+    {
+      "second": 2347,
+      "pm25": 2.89,
+      "pm10": 2.89,
+      "temperature": 36.8,
+      "humidity": 51.7
+    },
+    {
+      "second": 2348,
+      "pm25": 2.4,
+      "pm10": 2.4,
+      "temperature": 36.8,
+      "humidity": 51.8
+    },
+    {
+      "second": 2349,
+      "pm25": 2.44,
+      "pm10": 2.44,
+      "temperature": 36.8,
+      "humidity": 51.8
+    },
+    {
+      "second": 2350,
+      "pm25": 2.54,
+      "pm10": 2.54,
+      "temperature": 36.8,
+      "humidity": 51.9
+    },
+    {
+      "second": 2351,
+      "pm25": 2.48,
+      "pm10": 2.48,
+      "temperature": 36.8,
+      "humidity": 51.8
+    },
+    {
+      "second": 2352,
+      "pm25": 3.2,
+      "pm10": 3.2,
+      "temperature": 36.8,
+      "humidity": 51.9
+    },
+    {
+      "second": 2353,
+      "pm25": 2.5,
+      "pm10": 2.5,
+      "temperature": 36.8,
+      "humidity": 51.9
+    },
+    {
+      "second": 2354,
+      "pm25": 3.07,
+      "pm10": 3.07,
+      "temperature": 36.8,
+      "humidity": 51.9
+    },
+    {
+      "second": 2355,
+      "pm25": 3.41,
+      "pm10": 3.42,
+      "temperature": 36.8,
+      "humidity": 51.9
+    },
+    {
+      "second": 2356,
+      "pm25": 3.48,
+      "pm10": 3.48,
+      "temperature": 36.8,
+      "humidity": 51.8
+    },
+    {
+      "second": 2357,
+      "pm25": 3.45,
+      "pm10": 3.45,
+      "temperature": 36.8,
+      "humidity": 51.7
+    },
+    {
+      "second": 2358,
+      "pm25": 3.45,
+      "pm10": 3.45,
+      "temperature": 36.8,
+      "humidity": 51.7
+    },
+    {
+      "second": 2359,
+      "pm25": 2.65,
+      "pm10": 2.65,
+      "temperature": 36.8,
+      "humidity": 51.7
+    },
+    {
+      "second": 2360,
+      "pm25": 3.16,
+      "pm10": 3.16,
+      "temperature": 36.8,
+      "humidity": 51.6
+    },
+    {
+      "second": 2361,
+      "pm25": 5.07,
+      "pm10": 7.17,
+      "temperature": 36.8,
+      "humidity": 51.6
+    },
+    {
+      "second": 2362,
+      "pm25": 2.75,
+      "pm10": 2.75,
+      "temperature": 36.8,
+      "humidity": 51.7
+    },
+    {
+      "second": 2363,
+      "pm25": 3.34,
+      "pm10": 3.35,
+      "temperature": 36.8,
+      "humidity": 51.8
+    },
+    {
+      "second": 2364,
+      "pm25": 2.46,
+      "pm10": 2.46,
+      "temperature": 36.8,
+      "humidity": 51.8
+    },
+    {
+      "second": 2365,
+      "pm25": 2.37,
+      "pm10": 2.37,
+      "temperature": 36.8,
+      "humidity": 51.9
+    },
+    {
+      "second": 2366,
+      "pm25": 3.59,
+      "pm10": 3.66,
+      "temperature": 36.8,
+      "humidity": 52.1
+    },
+    {
+      "second": 2367,
+      "pm25": 3.67,
+      "pm10": 3.75,
+      "temperature": 36.9,
+      "humidity": 52.4
+    },
+    {
+      "second": 2368,
+      "pm25": 2.95,
+      "pm10": 2.95,
+      "temperature": 36.8,
+      "humidity": 52.5
+    },
+    {
+      "second": 2369,
+      "pm25": 2.99,
+      "pm10": 2.99,
+      "temperature": 36.8,
+      "humidity": 52.3
+    }
+  ],
+  "history_kind": "measured_validation_recording"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "experiment_id": "environment_and_simulated_control_v1",
+  "seed": 20261001,
+  "short_forecast": {
+    "dataset": "mendeley-7f22n9v7hp-v1-outdoor-only",
+    "training_recording": "Day 1",
+    "test_recording": "Day 2",
+    "lookback_seconds": 120,
+    "horizon_seconds": 30,
+    "maximum_observation_age_seconds": 1.5,
+    "train_fraction": 0.60,
+    "validation_fraction": 0.20,
+    "calibration_fraction": 0.20,
+    "split_gap_seconds": 151,
+    "iterations": 100,
+    "max_leaf_nodes": 8
+  },
+  "forecast": {
+    "dataset": "uci-beijing-multisite-501",
+    "horizon_hours": [1, 3, 6],
+    "lags_hours": [0, 1, 3, 6, 24],
+    "train_target_before": "2015-01-01",
+    "validation_start": "2015-01-02",
+    "validation_target_before": "2015-07-01",
+    "calibration_start": "2015-07-02",
+    "calibration_target_before": "2016-01-01",
+    "test_start": "2016-01-02",
+    "iterations": 100,
+    "max_leaf_nodes": 15,
+    "minimum_leaf_samples": 100,
+    "interval_nominal_coverage": 0.9,
+    "illustrative_pm25_threshold_ug_m3": 35.0,
+    "illustrative_pm10_threshold_ug_m3": 150.0
+  },
+  "simulation": {
+    "train_seed": 2101,
+    "validation_seed": 2201,
+    "test_seed": 2301,
+    "pinn_steps": 1600,
+    "dqn_steps": 30000,
+    "dqn_validation_every": 5000,
+    "test_episodes": 40,
+    "step_seconds": 5,
+    "episode_steps": 120,
+    "zone_names": ["A_north", "B_east", "C_south", "D_west"]
+  },
+  "test_policy": "Freeze selection and calibration before opening new test targets. Never tune against the original laboratory final test or this experiment's revealed test. Synthetic tests verify assumptions only."
+}

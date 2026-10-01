@@ -1,5 +1,16 @@
 # DustTwin Model Integration
 
+**New optional expansion, 1 October 2026:** [experimental AI prototype](experimental/README.md)
+adds trained outdoor PM2.5/PM10 forecasts, a separate hourly weather-aware model,
+PINN plume and DQN spraying simulations, probabilities, interval/anomaly experiments
+and ONNX exports. [The teammate report](experimental/teammate-report.md) explains
+actual results and remaining work. It uses a separate Python 3.13 environment/API;
+the frozen Python 3.14 `/v1` handoff below is unchanged. Physical control, dependable
+sensor diagnosis and general site effectiveness remain unvalidated.
+
+[Updated one-page prototype brief](output/pdf/DustTwin_AI_Prototype_Update_One_Page.pdf)
+summarizes the newly trained models, measured/simulated comparisons and limitations.
+
 The complete model/backend handoff for connecting the trained DustTwin AI to your existing website. Keep your frontend design and call this API for the actual predictions.
 
 The **trained model is included** in this repository. No retraining, GPU, Kaggle or separate model download is needed. Python **3.14** and the pinned packages are required; the live package is verified on macOS / Apple M4. Other platforms require the same setup checks before being called verified.

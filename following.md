@@ -1,5 +1,67 @@
 # Continue from here
 
+## Latest work: broader AI prototype, 1 October 2026
+
+The user clarified that they want the report's broader AI additions, asked for
+feasibility before changes, then requested dataset discovery/building and model
+training. They explicitly chose **measured forecasts plus simulated control**.
+That authorizes this separate experimental expansion, not physical trials.
+
+`experimental/README.md` and `experimental/teammate-report.md` describe the fitted
+package. New outdoor OPC-N3 PM2.5/PM10/temp/RH +30s models train/validate/calibrate
+on separated Day 1 blocks and test on Day 2 (3,882 windows). Short PM10 selected
+MAE 6.3105 beats persistence 7.2997; PM2.5 1.4118 loses persistence 1.3399.
+PM2.5 nominal 90% interval coverage is only 67.568%; short RH loses the baseline,
+and short temperature uses validation-selected persistence. Do not tune these
+now-revealed tests or call their lower errors an improvement over the different
+original laboratory task.
+
+Separate UCI hourly pollution/weather models use 163,670 fitting, 37,528 validation,
+37,507 calibration and 83,032 test rows. PM forecasts at +1/3/6h and temperature/
+derived RH/wind-component forecasts at +1h beat their test persistence MAE.
+Calibrated hourly exceedance classifiers and IsolationForest are fitted; injected
+extreme-value detection is weak at 32.067%, without real fault diagnosis. Weather
+was not joined to outdoor seconds or claimed as construction-site +30s inference.
+
+Generated datasets train a PINN with an actual advection/diffusion/reaction PDE
+loss, a toy particle/droplet efficiency surrogate and Double-DQN on 30,000
+transitions. DQN was selected on validation at step 20,000. Across 40 paired
+600-second test cases, DQN averages 4.896 L / 23.625 zone-seconds above the
+illustrative setting; reactive 2.707 L / 70.500; continuous 20 L / 20.500.
+DQN loses the combined reward to reactive, which stays default. Stress results
+show dependence on assumed capture. No measured water savings or exact footprint/
+perimeter arrival claim is supported. Control APIs issue simulated recommendations
+only. Float ONNX parity passes; 12,157-byte int8 policy changes 4.9% of random-state
+actions and is not served by default. Desktop CPU checked, no board deployed.
+
+The optional API uses its own Python 3.13.5/macOS arm64 environment and port 8011;
+original Python 3.14 `/v1` runtime is unchanged. All 14 prototype tests pass,
+including causal features, disjoint windows, PDE-generator identity, invalid/nonfinite
+requests, missing/mismatched models, simulation labels and exact-origin CORS.
+Five actual localhost HTTP endpoints reproduce model output; tracked trace errors
+and ONNX parity pass without raw training data. Source reproduction recomputes
+every new test forecast/interval coverage and verifies all 75 frozen upstream files.
+Original `scripts/verify_ai.py` also passes all 27,178 saved forecasts / 15,065 old
+test rows in the pinned Python 3.14.6 environment. No frozen file was fitted/edited.
+
+The one-page update is `output/pdf/DustTwin_AI_Prototype_Update_One_Page.pdf`;
+visually checked after rendering. It separates measured forecasts, trained
+simulation, weak results and remaining field/device/online work. The earlier PDF
+remains an accurate description of the original laboratory handoff.
+
+`retrain_candidate.py` supplies fresh-data, explicitly split, versioned candidate
+fitting without changing live artifacts. The old-data guard is tested; there is
+no field candidate or continuous stream yet. Fitting scripts refuse to overwrite
+the published artifacts. Raw archives, installed environments and generated
+transitions remain ignored. All model weights and useful evidence/examples are
+tracked with attribution.
+
+Next: publish this verified prototype milestone, check it in a fresh GitHub clone
+with a newly installed separate environment and record the actual results. Then
+the teammate follows `experimental/README.md` for integration. Only future work
+needing fresh measurements/target devices remains. Preserve the concurrent typo
+edit in `docs/ai-report-review.md`; do not stage or reset it.
+
 1 October 2026, Asia/Dhaka. **Handoff complete.** Public repository: <https://github.com/arifshekhk8/DustTwin-Model-Integration>.
 
 Read `AGENTS.md`, `plan.md`, `docs/decisions.md`, inspect Git status and remote history, and preserve concurrent changes.

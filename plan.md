@@ -1,5 +1,17 @@
 # Integration handoff plan
 
+## Newly authorized experimental expansion, 1 October 2026
+
+The user requested dataset discovery/building and training for the broader AI
+roadmap, then explicitly selected **measured forecasts with simulated control**.
+This new scope supersedes the earlier pause on changes for feasibility review.
+Preserve the frozen model and all 75 upstream files. Add the experiment separately
+under `experimental/`, with a new untouched temporal test and distinct synthetic
+test seeds. Predeclare splits/configuration before evaluation. Train and verify
+real-data multi-input forecasts and clearly labelled simulated plume/spraying
+models; supply model artifacts, an optional separate API, evidence and a teammate
+guide. Report unsuccessful comparisons and unfinished physical/edge work plainly.
+
 User request, 1 October 2026: create a public repository with every file the teammate needs to use the existing trained AI in his DustTwin frontend.
 
 1. **Complete:** package the actual trained model, shared features, strict inference service, pinned requirements, attributed recorded replay and evaluation. Add explicit frontend-origin configuration. Verify reload and API behavior.

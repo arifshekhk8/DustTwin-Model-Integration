@@ -1,0 +1,23 @@
+{
+  "simulation_only": true,
+  "policy": "dqn",
+  "source_pm10": 500.0,
+  "previous_source_pm10": 450.0,
+  "zone_pm10": [
+    20.0,
+    100.0,
+    90.0,
+    10.0
+  ],
+  "wind_from_degrees": 315.0,
+  "wind_speed_m_s": 4.2,
+  "humidity": 60.0,
+  "temperature": 30.0,
+  "last_duties": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "rollouts": 64
+}

@@ -1,0 +1,206 @@
+{
+  "kind": "saved_verification_response_not_live",
+  "response": {
+    "experiment": "measured_hourly_environment",
+    "station": "Aotizhongxin",
+    "cadence_seconds": 3600,
+    "issue_local_time": "2015-01-03 00:00:00",
+    "outputs": {
+      "pm25@1h": {
+        "prediction": 145.2493859527642,
+        "learned_prediction": 145.2493859527642,
+        "unit": "ug/m3",
+        "persistence_baseline": 141.0,
+        "learned_weight": 1,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 124.56560206712953,
+          "upper": 165.93316983839884,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      },
+      "pm10@1h": {
+        "prediction": 213.92534933722717,
+        "learned_prediction": 213.56713244963623,
+        "unit": "ug/m3",
+        "persistence_baseline": 215.0,
+        "learned_weight": 0.75,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 181.1948092248366,
+          "upper": 246.65588944961775,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      },
+      "temperature@1h": {
+        "prediction": -7.192895964918507,
+        "learned_prediction": -7.192895964918507,
+        "unit": "degC",
+        "persistence_baseline": -7.0,
+        "learned_weight": 1,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": -8.446670080206541,
+          "upper": -5.939121849630472,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      },
+      "humidity@1h": {
+        "prediction": 50.62251520446584,
+        "learned_prediction": 50.62251520446584,
+        "unit": "percent",
+        "persistence_baseline": 49.11141535163931,
+        "learned_weight": 1,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 43.06288615812575,
+          "upper": 58.18214425080593,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      },
+      "wind_east@1h": {
+        "prediction": -0.1060082923833617,
+        "learned_prediction": -0.0903199321958036,
+        "unit": "m/s",
+        "persistence_baseline": -0.15307337294603596,
+        "learned_weight": 0.75,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": -1.473073375825237,
+          "upper": 1.2610567910585138,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      },
+      "wind_north@1h": {
+        "prediction": -0.2216057424335926,
+        "learned_prediction": -0.2216057424335926,
+        "unit": "m/s",
+        "persistence_baseline": 0.36955181300451473,
+        "learned_weight": 1,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": -1.4010197036472254,
+          "upper": 0.9578082187800401,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      },
+      "pm25@3h": {
+        "prediction": 131.5272245870822,
+        "learned_prediction": 131.5272245870822,
+        "unit": "ug/m3",
+        "persistence_baseline": 141.0,
+        "learned_weight": 1,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 85.79433139752915,
+          "upper": 177.26011777663524,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      },
+      "pm10@3h": {
+        "prediction": 187.5509913771648,
+        "learned_prediction": 178.40132183621972,
+        "unit": "ug/m3",
+        "persistence_baseline": 215.0,
+        "learned_weight": 0.75,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 129.4885283436072,
+          "upper": 245.6134544107224,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      },
+      "pm25@6h": {
+        "prediction": 92.3051447906756,
+        "learned_prediction": 92.3051447906756,
+        "unit": "ug/m3",
+        "persistence_baseline": 141.0,
+        "learned_weight": 1,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 21.22684643263446,
+          "upper": 163.38344314871674,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      },
+      "pm10@6h": {
+        "prediction": 167.4792763143756,
+        "learned_prediction": 151.63903508583414,
+        "unit": "ug/m3",
+        "persistence_baseline": 215.0,
+        "learned_weight": 0.75,
+        "method": "validation_selected_learned_persistence_blend",
+        "interval": {
+          "lower": 89.3075086196857,
+          "upper": 245.6510440090655,
+          "nominal_coverage": 0.9,
+          "guaranteed_coverage": false
+        }
+      }
+    },
+    "wind_1h": {
+      "speed_m_s": 0.24565598534043515,
+      "from_degrees": 25.564791411182227
+    },
+    "threshold_probability_curves": {
+      "pm25": [
+        {
+          "within_hours": 1,
+          "probability_at_any_future_hourly_observation": 0.9997694258704174,
+          "illustrative_threshold_ug_m3": 35
+        },
+        {
+          "within_hours": 3,
+          "probability_at_any_future_hourly_observation": 0.9997694258704174,
+          "illustrative_threshold_ug_m3": 35
+        },
+        {
+          "within_hours": 6,
+          "probability_at_any_future_hourly_observation": 0.9997694258704174,
+          "illustrative_threshold_ug_m3": 35
+        }
+      ],
+      "pm10": [
+        {
+          "within_hours": 1,
+          "probability_at_any_future_hourly_observation": 0.915929203539823,
+          "illustrative_threshold_ug_m3": 150
+        },
+        {
+          "within_hours": 3,
+          "probability_at_any_future_hourly_observation": 0.9570063694267515,
+          "illustrative_threshold_ug_m3": 150
+        },
+        {
+          "within_hours": 6,
+          "probability_at_any_future_hourly_observation": 0.9708939708939709,
+          "illustrative_threshold_ug_m3": 150
+        }
+      ]
+    },
+    "anomaly": {
+      "possible_sensor_or_environment_shift": false,
+      "score": -0.4327187298136974,
+      "fault_diagnosis": null,
+      "calibration_normal_flag_target": 0.01
+    },
+    "field_validated": false,
+    "crossing_eta_seconds": null,
+    "warnings": [
+      "Hourly model cannot support a 30-second wind-aware claim",
+      "Training humidity was derived from dewpoint",
+      "Thresholds are illustrative experiment settings",
+      "Probability and interval calibration are site/distribution dependent",
+      "A model anomaly is not proof of a clogged or failed sensor"
+    ]
+  }
+}

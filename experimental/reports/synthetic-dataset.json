@@ -1,0 +1,28 @@
+{
+  "kind": "generated_simulation_only",
+  "config": {
+    "train_seed": 2101,
+    "validation_seed": 2201,
+    "test_seed": 2301,
+    "pinn_steps": 1600,
+    "dqn_steps": 30000,
+    "dqn_validation_every": 5000,
+    "test_episodes": 40,
+    "step_seconds": 5,
+    "episode_steps": 120,
+    "zone_names": [
+      "A_north",
+      "B_east",
+      "C_south",
+      "D_west"
+    ]
+  },
+  "efficiency_training_sha256": "7ee35d4fa9815cdc63ab27b05ec2a5449aedfb319990a4a614c12177c983c6f8",
+  "plume_training_sha256": "0c6f23cb363bbf0f1f8ab4cc359f163585e4682b435979835a8f6582b5693ff3",
+  "control_training_sha256": "0c9dea97eab6a640a578ad8c56852c3f077d021acc88c06d7b8a2eda3844a93a",
+  "training_seconds": 9.957360667001922,
+  "generator": "simulation_models.py",
+  "generator_sha256": "e85cb963e6e740d4acd63ce4dd2a08f3140e8bdb91d8fb6cf8d8efd29da994c6",
+  "reuse": "Generated data derived solely from the project's declared toy equations; no measured treatment labels",
+  "validation_test_note": "Separate seeds within an assumed distribution plus changed-efficiency stress test; no field validity"
+}
