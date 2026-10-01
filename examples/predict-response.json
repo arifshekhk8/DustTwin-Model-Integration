@@ -1,0 +1,46 @@
+{
+  "snapshot_id": "fd9f2589a62ca36a3bf530797afc61db4f391cf013c3784a03d830684e9c5695",
+  "mode": "live_inference",
+  "model_id": "hist_gb_depth3_iter100",
+  "artifact_sha256": "d78f1b37269f72af45933e01722968fb13ed82178f6d8b3e4c5584d46cec09c7",
+  "task_id": "construction_pm10_30s_v1",
+  "dataset_doi": "10.17632/7f22n9v7hp.1",
+  "monitor_id": "OPC-N3",
+  "issue_time_seconds": 120,
+  "target_time_seconds": 150,
+  "horizon_seconds": 30,
+  "units": "ug/m3",
+  "predicted_pm10_ug_m3": 313.5056183549442,
+  "current_pm10_ug_m3": 401.96,
+  "baselines": {
+    "persistence_pm10_ug_m3": 401.96,
+    "trailing_mean_pm10_ug_m3": 480.8970491803279
+  },
+  "input_quality": {
+    "snapshots": 121,
+    "maximum_observation_age_seconds": 0.0
+  },
+  "features": {
+    "pm10_lag_0s": 401.96,
+    "pm10_lag_1s": 414.73,
+    "pm10_lag_5s": 195.83,
+    "pm10_lag_10s": 87.36,
+    "pm10_lag_30s": 229.3,
+    "pm10_lag_60s": 1556.05,
+    "pm10_lag_120s": 65.01,
+    "pm10_mean_30s": 217.22258064516132,
+    "pm10_std_30s": 152.80335801004742,
+    "pm10_slope_30s": 3.31179435483871,
+    "pm10_mean_60s": 480.8970491803279,
+    "pm10_std_60s": 432.915955745262,
+    "pm10_slope_60s": -16.36980750925436,
+    "pm10_mean_120s": 361.16305785123967,
+    "pm10_std_120s": 451.6535109042518,
+    "pm10_slope_120s": 2.8605821026961116
+  },
+  "inference_milliseconds": 16.48416699754307,
+  "demo_setting_ug_m3": 500,
+  "crossing_status": "endpoint_below_setting",
+  "crossing_eta_seconds": null,
+  "scope": "Laboratory OPC-N3 forecast; no boundary validation or calibrated uncertainty. Endpoint forecast cannot determine crossing ETA."
+}

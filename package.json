@@ -1,0 +1,17 @@
+{
+  "name": "dusttwin-model-integration-checks",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Optional checks for the frontend adapter; Node is not needed by the Python backend.",
+  "scripts": {
+    "check:types": "tsc -p frontend/tsconfig.json",
+    "test:client": "node --test tests/client.test.mjs",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/react": "19.3.0",
+    "typescript": "7.0.2"
+  }
+}

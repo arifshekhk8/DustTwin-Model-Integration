@@ -8,4 +8,10 @@ The upstream model/backend/evidence have been copied into this independent hando
 
 Verified with the previously checked Python 3.14.6 pinned environment: five model fixtures reproduce within 1e-8; all 75 unchanged upstream files match size/SHA-256; all 23 Python tests pass, including allowed/denied browser origins, live forecasts and invalid-input rejection. These checks do not yet claim a browser connection or fresh GitHub clone.
 
-Exact next task: add and test the frontend connection adapter, runnable example and guide, then verify a fresh GitHub clone. Record actual results before declaring this package ready.
+## Frontend handoff completed
+
+The public backend milestone is pushed as `1801563`. Added `frontend/dusttwin-client.js`, its TypeScript declarations, an optional React hook, `examples/` with a runnable browser connection and actual measured request/response samples, and `docs/integration.md` / `docs/api.md`.
+
+Three adapter checks and TypeScript checking pass. Three Chromium browser journeys pass in 2.1 seconds: different-origin live API/display agreement to 1e-8, direct prediction POST, clock-only actual reveal, a delayed response rejected after changing clock, and service failure/reconnect. The first browser run exposed an unbound native fetch function; binding it to the browser global fixed the connection. These checks use the real artifact. The optional React hook was type-checked; the runnable framework-independent example was exercised in the browser. Independent simulation verification also passes all 20 runs / 9,600 intervals.
+
+Exact next task: push this connection milestone, verify a fresh GitHub clone without the original project's source/data, then publish the actual readiness record. No hardware or retraining step remains in this handoff.

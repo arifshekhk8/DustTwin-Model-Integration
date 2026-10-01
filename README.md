@@ -20,6 +20,20 @@ Open [health](http://127.0.0.1:8000/health) and confirm `ready: true` and `mode:
 
 For Windows, use `py -3.14 -m venv .venv`, `.venv\Scripts\python.exe` for Python commands and `$env:DUSTTWIN_ALLOWED_ORIGINS='http://localhost:5173,http://127.0.0.1:5173,http://127.0.0.1:5174'` in PowerShell. This platform has not been tested here.
 
+## Connect your website
+
+Follow [the frontend integration guide](docs/integration.md). Copy the adapter in `frontend/` into your existing website and set its backend address. A React hook and TypeScript declarations are included.
+
+To try the runnable browser example, keep the backend running and open a second terminal:
+
+```sh
+.venv/bin/python scripts/serve_example.py
+```
+
+Open [the example](http://127.0.0.1:5174/examples/) and click **Connect backend**. It uses real model output; **POST this history again** sends the complete measured input to `/v1/predict`. See [the API contract](docs/api.md) and [complete sample request](examples/predict-request.json).
+
+**This repository contains the files; it does not host a running API.** For a local demonstration run both the backend and your frontend on the laptop. For an online website, host Python separately or behind a same-origin proxy and use its HTTPS API address.
+
 ## API
 
 | Endpoint | Purpose |
@@ -43,8 +57,11 @@ The model predicts OPC-N3 laboratory **PM10 30 seconds ahead**, using the preced
 - `demo/simulation/`, `experiments/scenarios/`: optional fair strategy simulation and assumptions.
 - `reports/`, `data/manifest.json`, `docs/`: actual evaluation, source provenance and scientific limits.
 - `tests/`: model, causal input, replay, simulation and integration checks.
+- `frontend/`, `examples/`: browser adapter, optional React hook, runnable example and real sample request/response.
 
 Original bulk training downloads are acquired through `scripts/download_data.py`; they are unnecessary for using the fitted model. Python itself, installed dependencies and the teammate's frontend remain separate installations.
+
+For source reproduction and the distinction between original and handoff checks, read [reproducibility.md](docs/reproducibility.md). Preserve the handed-off model; use a separate scratch clone for fitting.
 
 ## Results to show honestly
 
@@ -57,5 +74,17 @@ Held-out MAE (µg/m³): **model 88.405**, persistence **95.702**, trailing mean 
 .venv/bin/python scripts/verify_handoff.py
 .venv/bin/python -m unittest discover -s tests -v
 ```
+
+Optional adapter checks (Node and npm needed only for these checks):
+
+```sh
+npm ci
+npm run check:types
+npm run test:client
+npx playwright install chromium
+npm run test:browser
+```
+
+Browser checks start their own backend/example on ports 18100/15174. They use `.venv/bin/python`; on Windows or another environment set `DUSTTWIN_TEST_PYTHON` to its Python executable. Production startup and your existing frontend do not need these optional test packages.
 
 The original source/evidence is from [DustTwin-AI](https://github.com/arifshekhk8/DustTwin-AI), pinned in [upstream provenance](models/upstream-provenance.json). Code/model: MIT. Dataset derivatives: attributed CC BY 4.0; see [NOTICE](NOTICE.md). Continuation notes: [following.md](following.md).

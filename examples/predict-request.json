@@ -1,0 +1,615 @@
+{
+  "task_id": "construction_pm10_30s_v1",
+  "monitor_id": "OPC-N3",
+  "clock_type": "elapsed_seconds_per_recording",
+  "units": "ug/m3",
+  "horizon_seconds": 30,
+  "issue_time_seconds": 120,
+  "history": [
+    {
+      "time_seconds": 0,
+      "observation_time_seconds": 0.0,
+      "pm10_ug_m3": 65.01
+    },
+    {
+      "time_seconds": 1,
+      "observation_time_seconds": 1.0,
+      "pm10_ug_m3": 36.17
+    },
+    {
+      "time_seconds": 2,
+      "observation_time_seconds": 2.0,
+      "pm10_ug_m3": 39.29
+    },
+    {
+      "time_seconds": 3,
+      "observation_time_seconds": 3.0,
+      "pm10_ug_m3": 72.61
+    },
+    {
+      "time_seconds": 4,
+      "observation_time_seconds": 4.0,
+      "pm10_ug_m3": 51.37
+    },
+    {
+      "time_seconds": 5,
+      "observation_time_seconds": 5.0,
+      "pm10_ug_m3": 25.99
+    },
+    {
+      "time_seconds": 6,
+      "observation_time_seconds": 6.0,
+      "pm10_ug_m3": 97.99
+    },
+    {
+      "time_seconds": 7,
+      "observation_time_seconds": 7.0,
+      "pm10_ug_m3": 32.15
+    },
+    {
+      "time_seconds": 8,
+      "observation_time_seconds": 8.0,
+      "pm10_ug_m3": 8.38
+    },
+    {
+      "time_seconds": 9,
+      "observation_time_seconds": 9.0,
+      "pm10_ug_m3": 24.33
+    },
+    {
+      "time_seconds": 10,
+      "observation_time_seconds": 10.0,
+      "pm10_ug_m3": 15.01
+    },
+    {
+      "time_seconds": 11,
+      "observation_time_seconds": 11.0,
+      "pm10_ug_m3": 75.75
+    },
+    {
+      "time_seconds": 12,
+      "observation_time_seconds": 12.0,
+      "pm10_ug_m3": 51.43
+    },
+    {
+      "time_seconds": 13,
+      "observation_time_seconds": 13.0,
+      "pm10_ug_m3": 169.09
+    },
+    {
+      "time_seconds": 14,
+      "observation_time_seconds": 14.0,
+      "pm10_ug_m3": 7.4
+    },
+    {
+      "time_seconds": 15,
+      "observation_time_seconds": 15.0,
+      "pm10_ug_m3": 47.04
+    },
+    {
+      "time_seconds": 16,
+      "observation_time_seconds": 16.0,
+      "pm10_ug_m3": 62.57
+    },
+    {
+      "time_seconds": 17,
+      "observation_time_seconds": 17.0,
+      "pm10_ug_m3": 14.12
+    },
+    {
+      "time_seconds": 18,
+      "observation_time_seconds": 18.0,
+      "pm10_ug_m3": 17.93
+    },
+    {
+      "time_seconds": 19,
+      "observation_time_seconds": 19.0,
+      "pm10_ug_m3": 68.73
+    },
+    {
+      "time_seconds": 20,
+      "observation_time_seconds": 20.0,
+      "pm10_ug_m3": 23.44
+    },
+    {
+      "time_seconds": 21,
+      "observation_time_seconds": 21.0,
+      "pm10_ug_m3": 45.38
+    },
+    {
+      "time_seconds": 22,
+      "observation_time_seconds": 22.0,
+      "pm10_ug_m3": 5.45
+    },
+    {
+      "time_seconds": 23,
+      "observation_time_seconds": 23.0,
+      "pm10_ug_m3": 17.01
+    },
+    {
+      "time_seconds": 24,
+      "observation_time_seconds": 24.0,
+      "pm10_ug_m3": 66.32
+    },
+    {
+      "time_seconds": 25,
+      "observation_time_seconds": 25.0,
+      "pm10_ug_m3": 8.63
+    },
+    {
+      "time_seconds": 26,
+      "observation_time_seconds": 26.0,
+      "pm10_ug_m3": 56.64
+    },
+    {
+      "time_seconds": 27,
+      "observation_time_seconds": 27.0,
+      "pm10_ug_m3": 16.05
+    },
+    {
+      "time_seconds": 28,
+      "observation_time_seconds": 28.0,
+      "pm10_ug_m3": 28.08
+    },
+    {
+      "time_seconds": 29,
+      "observation_time_seconds": 29.0,
+      "pm10_ug_m3": 23.53
+    },
+    {
+      "time_seconds": 30,
+      "observation_time_seconds": 30.0,
+      "pm10_ug_m3": 17.97
+    },
+    {
+      "time_seconds": 31,
+      "observation_time_seconds": 31.0,
+      "pm10_ug_m3": 14.56
+    },
+    {
+      "time_seconds": 32,
+      "observation_time_seconds": 32.0,
+      "pm10_ug_m3": 47.04
+    },
+    {
+      "time_seconds": 33,
+      "observation_time_seconds": 33.0,
+      "pm10_ug_m3": 1.48
+    },
+    {
+      "time_seconds": 34,
+      "observation_time_seconds": 34.0,
+      "pm10_ug_m3": 7.61
+    },
+    {
+      "time_seconds": 35,
+      "observation_time_seconds": 35.0,
+      "pm10_ug_m3": 6.72
+    },
+    {
+      "time_seconds": 36,
+      "observation_time_seconds": 36.0,
+      "pm10_ug_m3": 119.56
+    },
+    {
+      "time_seconds": 37,
+      "observation_time_seconds": 37.0,
+      "pm10_ug_m3": 7.24
+    },
+    {
+      "time_seconds": 38,
+      "observation_time_seconds": 38.0,
+      "pm10_ug_m3": 81.34
+    },
+    {
+      "time_seconds": 39,
+      "observation_time_seconds": 39.0,
+      "pm10_ug_m3": 21.87
+    },
+    {
+      "time_seconds": 40,
+      "observation_time_seconds": 40.0,
+      "pm10_ug_m3": 131.83
+    },
+    {
+      "time_seconds": 41,
+      "observation_time_seconds": 41.0,
+      "pm10_ug_m3": 35.62
+    },
+    {
+      "time_seconds": 42,
+      "observation_time_seconds": 42.0,
+      "pm10_ug_m3": 24.71
+    },
+    {
+      "time_seconds": 43,
+      "observation_time_seconds": 43.0,
+      "pm10_ug_m3": 56.93
+    },
+    {
+      "time_seconds": 44,
+      "observation_time_seconds": 44.0,
+      "pm10_ug_m3": 98.03
+    },
+    {
+      "time_seconds": 45,
+      "observation_time_seconds": 45.0,
+      "pm10_ug_m3": 35.43
+    },
+    {
+      "time_seconds": 46,
+      "observation_time_seconds": 46.0,
+      "pm10_ug_m3": 52.14
+    },
+    {
+      "time_seconds": 47,
+      "observation_time_seconds": 47.0,
+      "pm10_ug_m3": 44.29
+    },
+    {
+      "time_seconds": 48,
+      "observation_time_seconds": 48.0,
+      "pm10_ug_m3": 234.59
+    },
+    {
+      "time_seconds": 49,
+      "observation_time_seconds": 49.0,
+      "pm10_ug_m3": 731.46
+    },
+    {
+      "time_seconds": 50,
+      "observation_time_seconds": 50.0,
+      "pm10_ug_m3": 1230.61
+    },
+    {
+      "time_seconds": 51,
+      "observation_time_seconds": 51.0,
+      "pm10_ug_m3": 1324.11
+    },
+    {
+      "time_seconds": 52,
+      "observation_time_seconds": 52.0,
+      "pm10_ug_m3": 1136.57
+    },
+    {
+      "time_seconds": 53,
+      "observation_time_seconds": 53.0,
+      "pm10_ug_m3": 585.53
+    },
+    {
+      "time_seconds": 54,
+      "observation_time_seconds": 54.0,
+      "pm10_ug_m3": 667.22
+    },
+    {
+      "time_seconds": 55,
+      "observation_time_seconds": 55.0,
+      "pm10_ug_m3": 1393.48
+    },
+    {
+      "time_seconds": 56,
+      "observation_time_seconds": 56.0,
+      "pm10_ug_m3": 1726.8
+    },
+    {
+      "time_seconds": 57,
+      "observation_time_seconds": 57.0,
+      "pm10_ug_m3": 986.0
+    },
+    {
+      "time_seconds": 58,
+      "observation_time_seconds": 58.0,
+      "pm10_ug_m3": 711.19
+    },
+    {
+      "time_seconds": 59,
+      "observation_time_seconds": 59.0,
+      "pm10_ug_m3": 1561.19
+    },
+    {
+      "time_seconds": 60,
+      "observation_time_seconds": 60.0,
+      "pm10_ug_m3": 1556.05
+    },
+    {
+      "time_seconds": 61,
+      "observation_time_seconds": 61.0,
+      "pm10_ug_m3": 2171.08
+    },
+    {
+      "time_seconds": 62,
+      "observation_time_seconds": 62.0,
+      "pm10_ug_m3": 1269.95
+    },
+    {
+      "time_seconds": 63,
+      "observation_time_seconds": 63.0,
+      "pm10_ug_m3": 1212.82
+    },
+    {
+      "time_seconds": 64,
+      "observation_time_seconds": 64.0,
+      "pm10_ug_m3": 1038.33
+    },
+    {
+      "time_seconds": 65,
+      "observation_time_seconds": 65.0,
+      "pm10_ug_m3": 881.94
+    },
+    {
+      "time_seconds": 66,
+      "observation_time_seconds": 66.0,
+      "pm10_ug_m3": 670.15
+    },
+    {
+      "time_seconds": 67,
+      "observation_time_seconds": 67.0,
+      "pm10_ug_m3": 674.41
+    },
+    {
+      "time_seconds": 68,
+      "observation_time_seconds": 68.0,
+      "pm10_ug_m3": 565.58
+    },
+    {
+      "time_seconds": 69,
+      "observation_time_seconds": 69.0,
+      "pm10_ug_m3": 708.6
+    },
+    {
+      "time_seconds": 70,
+      "observation_time_seconds": 70.0,
+      "pm10_ug_m3": 994.0
+    },
+    {
+      "time_seconds": 71,
+      "observation_time_seconds": 71.0,
+      "pm10_ug_m3": 319.59
+    },
+    {
+      "time_seconds": 72,
+      "observation_time_seconds": 72.0,
+      "pm10_ug_m3": 468.63
+    },
+    {
+      "time_seconds": 73,
+      "observation_time_seconds": 73.0,
+      "pm10_ug_m3": 565.67
+    },
+    {
+      "time_seconds": 74,
+      "observation_time_seconds": 74.0,
+      "pm10_ug_m3": 265.14
+    },
+    {
+      "time_seconds": 75,
+      "observation_time_seconds": 75.0,
+      "pm10_ug_m3": 320.63
+    },
+    {
+      "time_seconds": 76,
+      "observation_time_seconds": 76.0,
+      "pm10_ug_m3": 663.68
+    },
+    {
+      "time_seconds": 77,
+      "observation_time_seconds": 77.0,
+      "pm10_ug_m3": 939.35
+    },
+    {
+      "time_seconds": 78,
+      "observation_time_seconds": 78.0,
+      "pm10_ug_m3": 1252.18
+    },
+    {
+      "time_seconds": 79,
+      "observation_time_seconds": 79.0,
+      "pm10_ug_m3": 757.11
+    },
+    {
+      "time_seconds": 80,
+      "observation_time_seconds": 80.0,
+      "pm10_ug_m3": 119.21
+    },
+    {
+      "time_seconds": 81,
+      "observation_time_seconds": 81.0,
+      "pm10_ug_m3": 944.03
+    },
+    {
+      "time_seconds": 82,
+      "observation_time_seconds": 82.0,
+      "pm10_ug_m3": 1007.18
+    },
+    {
+      "time_seconds": 83,
+      "observation_time_seconds": 83.0,
+      "pm10_ug_m3": 1161.56
+    },
+    {
+      "time_seconds": 84,
+      "observation_time_seconds": 84.0,
+      "pm10_ug_m3": 698.11
+    },
+    {
+      "time_seconds": 85,
+      "observation_time_seconds": 85.0,
+      "pm10_ug_m3": 610.26
+    },
+    {
+      "time_seconds": 86,
+      "observation_time_seconds": 86.0,
+      "pm10_ug_m3": 115.95
+    },
+    {
+      "time_seconds": 87,
+      "observation_time_seconds": 87.0,
+      "pm10_ug_m3": 251.33
+    },
+    {
+      "time_seconds": 88,
+      "observation_time_seconds": 88.0,
+      "pm10_ug_m3": 217.93
+    },
+    {
+      "time_seconds": 89,
+      "observation_time_seconds": 89.0,
+      "pm10_ug_m3": 180.37
+    },
+    {
+      "time_seconds": 90,
+      "observation_time_seconds": 90.0,
+      "pm10_ug_m3": 229.3
+    },
+    {
+      "time_seconds": 91,
+      "observation_time_seconds": 91.0,
+      "pm10_ug_m3": 102.09
+    },
+    {
+      "time_seconds": 92,
+      "observation_time_seconds": 92.0,
+      "pm10_ug_m3": 125.57
+    },
+    {
+      "time_seconds": 93,
+      "observation_time_seconds": 93.0,
+      "pm10_ug_m3": 86.82
+    },
+    {
+      "time_seconds": 94,
+      "observation_time_seconds": 94.0,
+      "pm10_ug_m3": 33.29
+    },
+    {
+      "time_seconds": 95,
+      "observation_time_seconds": 95.0,
+      "pm10_ug_m3": 81.42
+    },
+    {
+      "time_seconds": 96,
+      "observation_time_seconds": 96.0,
+      "pm10_ug_m3": 175.5
+    },
+    {
+      "time_seconds": 97,
+      "observation_time_seconds": 97.0,
+      "pm10_ug_m3": 677.29
+    },
+    {
+      "time_seconds": 98,
+      "observation_time_seconds": 98.0,
+      "pm10_ug_m3": 575.82
+    },
+    {
+      "time_seconds": 99,
+      "observation_time_seconds": 99.0,
+      "pm10_ug_m3": 22.92
+    },
+    {
+      "time_seconds": 100,
+      "observation_time_seconds": 100.0,
+      "pm10_ug_m3": 159.85
+    },
+    {
+      "time_seconds": 101,
+      "observation_time_seconds": 101.0,
+      "pm10_ug_m3": 338.35
+    },
+    {
+      "time_seconds": 102,
+      "observation_time_seconds": 102.0,
+      "pm10_ug_m3": 186.76
+    },
+    {
+      "time_seconds": 103,
+      "observation_time_seconds": 103.0,
+      "pm10_ug_m3": 83.21
+    },
+    {
+      "time_seconds": 104,
+      "observation_time_seconds": 104.0,
+      "pm10_ug_m3": 177.02
+    },
+    {
+      "time_seconds": 105,
+      "observation_time_seconds": 105.0,
+      "pm10_ug_m3": 307.68
+    },
+    {
+      "time_seconds": 106,
+      "observation_time_seconds": 106.0,
+      "pm10_ug_m3": 285.86
+    },
+    {
+      "time_seconds": 107,
+      "observation_time_seconds": 107.0,
+      "pm10_ug_m3": 273.83
+    },
+    {
+      "time_seconds": 108,
+      "observation_time_seconds": 108.0,
+      "pm10_ug_m3": 79.36
+    },
+    {
+      "time_seconds": 109,
+      "observation_time_seconds": 109.0,
+      "pm10_ug_m3": 152.1
+    },
+    {
+      "time_seconds": 110,
+      "observation_time_seconds": 110.0,
+      "pm10_ug_m3": 87.36
+    },
+    {
+      "time_seconds": 111,
+      "observation_time_seconds": 111.0,
+      "pm10_ug_m3": 45.64
+    },
+    {
+      "time_seconds": 112,
+      "observation_time_seconds": 112.0,
+      "pm10_ug_m3": 269.41
+    },
+    {
+      "time_seconds": 113,
+      "observation_time_seconds": 113.0,
+      "pm10_ug_m3": 64.43
+    },
+    {
+      "time_seconds": 114,
+      "observation_time_seconds": 114.0,
+      "pm10_ug_m3": 197.16
+    },
+    {
+      "time_seconds": 115,
+      "observation_time_seconds": 115.0,
+      "pm10_ug_m3": 195.83
+    },
+    {
+      "time_seconds": 116,
+      "observation_time_seconds": 116.0,
+      "pm10_ug_m3": 288.0
+    },
+    {
+      "time_seconds": 117,
+      "observation_time_seconds": 117.0,
+      "pm10_ug_m3": 368.63
+    },
+    {
+      "time_seconds": 118,
+      "observation_time_seconds": 118.0,
+      "pm10_ug_m3": 246.71
+    },
+    {
+      "time_seconds": 119,
+      "observation_time_seconds": 119.0,
+      "pm10_ug_m3": 414.73
+    },
+    {
+      "time_seconds": 120,
+      "observation_time_seconds": 120.0,
+      "pm10_ug_m3": 401.96
+    }
+  ]
+}
