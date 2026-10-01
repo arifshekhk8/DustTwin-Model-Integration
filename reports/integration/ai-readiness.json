@@ -1,0 +1,65 @@
+{
+  "verified_at": "2026-10-01T13:55:24.708873+06:00",
+  "status": "passed",
+  "scope": "Frozen laboratory PM10 model/backend handoff; no field, hardware or teammate frontend acceptance",
+  "platform": {
+    "python": "3.14.6",
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "model_id": "hist_gb_depth3_iter100",
+  "artifact_sha256": "d78f1b37269f72af45933e01722968fb13ed82178f6d8b3e4c5584d46cec09c7",
+  "verification_script_sha256": "3c0951a6ca6247fceb8642975dcb04ae3691b619dbbef834b554b149606d9b90",
+  "unchanged_upstream_files": 75,
+  "fixture_predictions": 5,
+  "recordings": 6,
+  "recomputed_saved_forecasts": 27178,
+  "verified_test_rows": 15065,
+  "test_metrics": {
+    "persistence": {
+      "samples": 15065,
+      "mae_ug_m3": 95.70167474278128,
+      "rmse_ug_m3": 199.38422373835172,
+      "mean_error_ug_m3": 0.27809691337537334
+    },
+    "trailing_mean": {
+      "samples": 15065,
+      "mae_ug_m3": 81.56502755817685,
+      "rmse_ug_m3": 200.71346663945315,
+      "mean_error_ug_m3": 0.6356029119716207
+    },
+    "selected_model": {
+      "samples": 15065,
+      "mae_ug_m3": 88.40467510847934,
+      "rmse_ug_m3": 179.27205253712694,
+      "mean_error_ug_m3": 9.450305680513264
+    }
+  },
+  "descriptive_warnings": {
+    "persistence": {
+      "matched_events": 0,
+      "false_alerts": 0,
+      "scorable_events": 18
+    },
+    "trailing_mean": {
+      "matched_events": 13,
+      "false_alerts": 8,
+      "scorable_events": 18
+    },
+    "selected_model": {
+      "matched_events": 13,
+      "false_alerts": 15,
+      "scorable_events": 18
+    }
+  },
+  "checks": [
+    "all included causal histories and target timestamps",
+    "all saved forecasts and mean baselines",
+    "complete test clock coverage, trace values and pooled/per-recording errors",
+    "recomputed descriptive warning events",
+    "live replay/direct API equality and clock-only actual reveal",
+    "unavailable live model returns 503; saved replay is labelled"
+  ],
+  "raw_or_prepared_training_data_required": false,
+  "trained_again": false
+}

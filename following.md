@@ -31,3 +31,15 @@ All requested handoff milestones are complete. The team integrates the files int
 ## Git checkpoint
 
 Backend milestone `1801563` and connection milestone `6c924e4` are pushed to `main`. The final documentation/readiness checkpoint is committed and pushed next; confirm local HEAD, origin/main and GitHub main are equal and the worktree is clean. Read its resulting hash from Git rather than embedding a commit in its own contents.
+
+## AI-only completion and PDF review, 1 October 2026
+
+The user asked whether `DustTwin_AI_Integration_One_Page_Summary.pdf` matches this latest handoff and requested completion of only the AI model today. The frozen current model is complete; the PDF's speculative future AI additions are not present-day requirements. The teammate remains responsible for the existing frontend and backend hosting.
+
+Read `docs/ai-report-review.md` for the verified claim-by-claim corrections. Model identity, causal history, sixteen features and test errors match. Physical actuation, general water saving, Gaussian plume physics, PM2.5 outputs, exact measured crossing ETA and competition validation are not established. NW wind maps toward B/C under this repository's convention. The model beats persistence MAE but loses to trailing mean MAE; unreliable first-onset warnings and false alerts remain visible. The source PDF was read and visually inspected; it was not edited.
+
+Actual gap found: the unchanged inherited `verify_evaluation.py` failed in the handoff because prepared test arrays are intentionally not tracked. Added `scripts/verify_ai.py` to verify the delivered package from tracked assets alone. It passes all 75 upstream files, five fixtures, six replay recordings / 27,178 recomputed saved forecasts, all 15,065 final-test rows, independently recalculated pooled/per-recording errors, recomputed descriptive warning counts, live API equality/matured actual and labelled saved-only behavior. Artifact SHA-256 is unchanged; no fitting or configuration/preparation changes.
+
+Five new regression tests reject invented saved forecasts, shifted targets, missing/duplicate trace clocks and understated pooled/recording errors, and exercise acceptance in an isolated temporary package with no raw/prepared training data. All 28 Python tests pass (6.143 seconds). TypeScript checking, three adapter checks and three Chromium browser journeys pass (2.5 seconds). Existing example/frontend/model source is unchanged. The pinned interpreter used is `tmp/fresh-clone/.venv/bin/python`; installed packages stay ignored. Results: `reports/integration/ai-readiness.json`.
+
+Exact next action for this milestone: commit/push the verified AI acceptance and report corrections, clone that GitHub commit into an ignored fresh directory, rerun AI acceptance and the 28 Python tests there, record the clone/checkpoint evidence and confirm local/GitHub HEAD equality. After that, the AI-only task is complete. Further work needs an actual issue or a separately requested model experiment with an untouched evaluation dataset.

@@ -4,6 +4,8 @@ The complete model/backend handoff for connecting the trained DustTwin AI to you
 
 The **trained model is included** in this repository. No retraining, GPU, Kaggle or separate model download is needed. Python **3.14** and the pinned packages are required; the live package is verified on macOS / Apple M4. Other platforms require the same setup checks before being called verified.
 
+The AI model/backend is complete for the Round 1 software handoff. [Report review and AI acceptance](docs/ai-report-review.md) identifies which claims in the team's one-page summary are supported and which need correction. The report's advanced AI roadmap is separate research.
+
 ## Start the backend
 
 ```sh
@@ -74,8 +76,11 @@ Verified from a fresh GitHub clone on Python 3.14.6 / Apple M4: five model fixtu
 ```sh
 .venv/bin/python scripts/verify_model.py
 .venv/bin/python scripts/verify_handoff.py
+.venv/bin/python scripts/verify_ai.py
 .venv/bin/python -m unittest discover -s tests -v
 ```
+
+The AI acceptance command re-executes all 27,178 included saved forecasts and verifies all 15,065 exported test rows, baselines, errors and warning counts using tracked files only. It also checks live/saved API behavior. It does not download data or retrain. The historical `verify_evaluation.py` additionally requires prepared training arrays; use it for source reproduction in a separate scratch clone.
 
 Optional adapter checks (Node and npm needed only for these checks):
 
