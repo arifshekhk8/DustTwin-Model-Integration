@@ -47,3 +47,11 @@ Runtime/acceptance milestone `8decca9` is pushed. It was cloned directly from Gi
 **AI-only completion is achieved.** This final documentation/evidence checkpoint is committed and pushed next; confirm local HEAD, origin/main and GitHub main match and the worktree is clean. The frozen model/backend/frontend runtime has not changed. The original `DustTwin-AI` release is untouched.
 
 Exact next action after this checkpoint: the teammate follows `docs/integration.md` to connect the existing frontend and choose hosting if needed. No AI training step remains for the current software demonstration. Further AI work needs an actual issue or a separately requested model experiment with an untouched evaluation dataset. The original PDF was not edited; use `docs/ai-report-review.md` to correct it before presenting.
+
+## One-page teammate report, 1 October 2026
+
+The user requested a report similar to the supplied visual brief so the teammate can easily distinguish today's AI capabilities from future work. Created `output/pdf/DustTwin_AI_Model_Now_and_Future_One_Page.pdf`: one A4 portrait page, dark visual style, three sections for implemented AI, current limits and proposed future research, with a forecast flow, measured model/baseline table, verification/warning counts, attribution and frontend connection instructions. No speculative capability is described as implemented; simulation and physical field evidence remain distinct. The original supplied PDF and frozen model/backend are unchanged.
+
+The final PDF was rendered with Poppler and visually inspected after layout adjustments. It has exactly one page, expected metric values/section text, all text inside the page and working repository/evidence links. The optional temporary builder and rendered QA image are under ignored `tmp/pdfs/`; only the finished PDF and documentation are published. PDF files are already marked binary by `.gitattributes`.
+
+Exact next action: share the one-page report and repository link with the teammate, then follow the existing frontend integration guide. No AI implementation or report authoring work remains for this request. Commit/push this document checkpoint and confirm clean local/GitHub equality; do not alter the frozen runtime or create additional training work.

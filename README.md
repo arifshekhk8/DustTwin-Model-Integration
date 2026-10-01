@@ -6,6 +6,8 @@ The **trained model is included** in this repository. No retraining, GPU, Kaggle
 
 The AI model/backend is complete for the Round 1 software handoff. [Report review and AI acceptance](docs/ai-report-review.md) identifies which claims in the team's one-page summary are supported and which need correction. The report's advanced AI roadmap is separate research.
 
+[One-page teammate report: AI available now, current limits and future work](output/pdf/DustTwin_AI_Model_Now_and_Future_One_Page.pdf) presents the verified capabilities, benchmark comparison and frontend connection step in a concise visual brief.
+
 ## Start the backend
 
 ```sh
