@@ -48,7 +48,7 @@ The old `scripts/verify_evaluation.py` remains unchanged historical source repro
 
 `verify_ai.py` checks the 75 frozen upstream files, artifact/environment/feature/configuration identity, five fixtures, every included replay history and target timestamp, all 27,178 saved predictions and mean baselines, and all 15,065 test trace rows. It independently recalculates pooled/per-recording error metrics from the exported trace and recomputes descriptive warning counts using the frozen rules. It verifies live replay/direct API agreement, clock-only actual reveal, unavailable-model rejection and labelled saved replay. No raw downloads, prepared training arrays, retraining or network access are needed.
 
-Actual results are in [AI readiness](../reports/integration/ai-readiness.json). Existing browser checks cover the included example; [integration checks](../reports/integration/checks.json) also record the earlier fresh-clone setup. Scope remains laboratory software, and macOS arm64 / Python 3.14.6 is the verified live platform.
+Actual results are in [AI readiness](../reports/integration/ai-readiness.json) and [AI fresh-clone verification](../reports/integration/ai-fresh-clone.json). Commit `8decca9` was cloned directly from GitHub, a new environment installed the pinned packages, and all AI checks plus 28 Python tests passed without raw/prepared training data. Three adapter checks, three Chromium journeys and TypeScript checking also passed in the main checkout against the unchanged connection example. [Integration checks](../reports/integration/checks.json) retain the earlier fresh-clone setup. Scope remains laboratory software, and macOS arm64 / Python 3.14.6 is the verified live platform.
 
 ## Handoff boundary
 

@@ -71,7 +71,7 @@ Held-out MAE (µg/m³): **model 88.405**, persistence **95.702**, trailing mean 
 
 ## Verify
 
-Verified from a fresh GitHub clone on Python 3.14.6 / Apple M4: five model fixtures, 23 Python tests, three adapter tests, three Chromium browser journeys and TypeScript checking pass. The browser exercised the included example across origins, including direct prediction, matured actual reveal, stale-response rejection and service recovery. See [actual check details](reports/integration/checks.json).
+Verified from a fresh GitHub clone and newly installed Python 3.14.6 environment on Apple M4: five model fixtures, all 27,178 saved forecasts, all 15,065 test rows and 28 Python tests pass. See [AI fresh-clone results](reports/integration/ai-fresh-clone.json). Three adapter tests, three Chromium browser journeys and TypeScript checking also pass. The browser exercised the included example across origins, including direct prediction, matured actual reveal, stale-response rejection and service recovery. The earlier [integration checks](reports/integration/checks.json) retain the original handoff evidence.
 
 ```sh
 .venv/bin/python scripts/verify_model.py
